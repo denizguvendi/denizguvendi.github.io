@@ -1,0 +1,8 @@
+venv/
+website/
+.vscode/
+*.mov
+projects/01_archigrad.io/*.mp4
+# Ignore large original videos
+*.mov
+# Allow compressed videos under 50MB
