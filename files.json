@@ -4,6 +4,7 @@
     "path": "01_archigrad.io",
     "type": "folder",
     "images": [
+      "10.png",
       "2.gif",
       "3.gif",
       "4.jpg",
@@ -39,7 +40,16 @@
         "type": "folder",
         "images": [
           "1.jpg",
-          "2.gif"
+          "2.gif",
+          "3000_aopJTIoIGS.jpg",
+          "vid__MaifvGXiON.png",
+          "vid__RgHctZFZNQ.png",
+          "vid__bgfKOtWPWZ.png",
+          "vid__fwWbgeKtXp.png",
+          "vid__sEXOESTfSy.png",
+          "vid__ubEWcSQBEA.png",
+          "vid__xUWjxDfLGx.png",
+          "vid__zcgMQiAUyE.png"
         ],
         "videos": [],
         "pdfs": [],
@@ -54,7 +64,9 @@
           "Layer 3.png"
         ],
         "videos": [],
-        "pdfs": [],
+        "pdfs": [
+          "DB2025_WAYFINDING_.pdf"
+        ],
         "embeds": [],
         "children": []
       },
