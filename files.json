@@ -4,23 +4,22 @@
     "path": "01_archigrad.io",
     "type": "folder",
     "images": [
-      "10.png",
-      "2.gif",
-      "3.gif",
-      "4.jpg",
-      "5.jpg",
-      "7.gif"
+      "archigrad.io.gif",
+      "archive.jpg",
+      "archivestack.jpg",
+      "projectdelijn.png",
+      "realtimedata.gif",
+      "stack.gif"
     ],
     "videos": [
-      "0_MAIN_1.mp4",
-      "Comp1.mp4",
       "programmingesp32.mp4",
+      "project.mp4",
+      "realtime-houdini.mp4",
       "video_DEX_exhibition_compressed.mp4"
     ],
     "pdfs": [],
     "embeds": [
-      "stoneinfocus.txt",
-      "whoarewe.txt"
+      "about.txt"
     ],
     "children": []
   },

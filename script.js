@@ -28,6 +28,22 @@ function renderGallery(currentLevel, stack) {
   currentStack = stack;
   const currentFolder = stack[stack.length - 1] || null;
 
+const folderAboutDiv = document.getElementById('folderAbout');
+folderAboutDiv.innerHTML = ""; // Always clear on navigation
+
+if (currentFolder && currentFolder.embeds && currentFolder.embeds.includes("about.txt")) {
+  fetch(`projects/${currentFolder.path}/about.txt`)
+    .then(res => res.text())
+    .then(text => {
+      folderAboutDiv.innerHTML = `<div class="folder-about-content">${text.trim()}</div>`;
+    })
+    .catch(() => {
+      folderAboutDiv.innerHTML = `<div class="folder-about-content">[about.txt could not be loaded]</div>`;
+    });
+}
+
+
+  // (The rest is unchanged)
   currentLevel.forEach(node => {
     if (node.type === "folder") {
       const previewImage = getRandomImage(node);
@@ -55,6 +71,17 @@ function renderGallery(currentLevel, stack) {
 
   addOrRemoveBackButton(stack);
 }
+
+
+  if (currentFolder) {
+    renderImages(currentFolder);
+    renderVideos(currentFolder);
+    renderPDFs(currentFolder);
+    renderEmbeds(currentFolder);
+  }
+
+  addOrRemoveBackButton(stack);
+
 
 function renderImages(folder) {
   const imageList = (folder.images || []).map(img => `projects/${folder.path}/${img}`);
@@ -177,6 +204,8 @@ function resolveNode(nodes, pathStack) {
 }
 
 
+const imageOverlay = document.getElementById("imageOverlay");
+const overlayImg = document.getElementById("overlayImg");
 const overlayPrev = document.getElementById("overlayPrev");
 const overlayNext = document.getElementById("overlayNext");
 
@@ -205,7 +234,6 @@ overlayPrev.onclick = function(e) {
     updateOverlayNav();
   }
 };
-
 overlayNext.onclick = function(e) {
   e.stopPropagation();
   if (overlayCurrentIndex < overlayImages.length - 1) {
@@ -214,8 +242,6 @@ overlayNext.onclick = function(e) {
     updateOverlayNav();
   }
 };
-
-// Only close when clicking on dark background, not on image or arrows
 imageOverlay.onclick = function(e) {
   if (e.target === imageOverlay) {
     imageOverlay.style.display = "none";
@@ -223,7 +249,6 @@ imageOverlay.onclick = function(e) {
     overlayImages = [];
   }
 };
-
 // Keyboard navigation
 window.addEventListener("keydown", function(e) {
   if (imageOverlay.style.display === "flex") {

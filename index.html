@@ -47,6 +47,18 @@
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
     }
+    .folder-about-content {
+      background: #00000000;
+      color: #fff;
+      padding: 0;
+      margin-bottom: 2rem;
+      border-radius: 0;
+      font-size: 1.04em;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: pre-line;
+    }
 
     .gallery {
       display: grid;
@@ -133,13 +145,15 @@ video {
 
   <main>
     <section id="projects">
-      <h2>Projects</h2>
-      <div class="gallery" id="gallery"></div>
+       <h2>Projects</h2>
+       <div id="folderAbout"></div>
+       <div id="folderAbout"></div>
+       <div class="gallery" id="gallery"></div>
     </section>
 
-<section id="about" style="margin-top:4rem; padding:3rem 1rem; background:#181818; color:#fff; text-align:center;">
+<section id="about" style="margin-top:1rem; padding:0rem 0rem; background:#18181800; color:#fff; text-align:center;">
   <h2>About</h2>
-  <p style="white-space:pre-line; font-size:1.1em; max-width:650px; margin:0 auto;">
+  <p style="white-space:pre-line; font-size:1.0em; max-width:650px; margin:0 auto;">
 Deniz Güvendi [TR]:
 
 Licensed architect from Turkey with a practice that focuses on adaptability, circularity, and intelligence shaping the built environment.
@@ -177,7 +191,7 @@ Turkish [native], English [fluent]
 
 <div id="imageOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center;">
   <button id="overlayPrev" style="position:absolute;left:2vw;top:50%;transform:translateY(-50%);font-size:2.6rem;background:none;border:none;color:#fff;cursor:pointer;opacity:0.7;">&#8592;</button>
-  <img id="overlayImg" src="" alt="Image Preview" style="max-width:90vw; max-height:90vh; box-shadow:0 0 32px #000b; background:transparent; border-radius:1em;">
+  <img id="overlayImg" src="" alt="Image Preview" style="max-width:90vw; max-height:90vh; box-shadow:0 0 32px rgba(0, 0, 0, 0); background:transparent; border-radius:1em;">
   <button id="overlayNext" style="position:absolute;right:2vw;top:50%;transform:translateY(-50%);font-size:2.6rem;background:none;border:none;color:#fff;cursor:pointer;opacity:0.7;">&#8594;</button>
 </div>
 
