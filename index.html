@@ -125,7 +125,9 @@ video {
 </head>
 <body>
   <header>
-    <h1>Deniz Güvendi_archigrad.io</h1>
+    <h1>Deniz Güvendi_archigrad.io</h1> <button id="aboutBtn" style="font-size:1rem; padding:0em 0em; background:#111; border:0px solid #33333300; color:#aaa; border-radius:0px; cursor:pointer; font-family:inherit; margin-left:2em;">
+  About
+</button>
     <p>Architect · Istanbul · 🟢Bangkok</p>
   </header>
 
@@ -134,7 +136,50 @@ video {
       <h2>Projects</h2>
       <div class="gallery" id="gallery"></div>
     </section>
+
+<section id="about" style="margin-top:4rem; padding:3rem 1rem; background:#181818; color:#fff; text-align:center;">
+  <h2>About</h2>
+  <p style="white-space:pre-line; font-size:1.1em; max-width:650px; margin:0 auto;">
+Deniz Güvendi [TR]:
+
+Licensed architect from Turkey with a practice that focuses on adaptability, circularity, and intelligence shaping the built environment.
+
+Professional experience includes various roles in architectural design offices, urban design competitions, and restoration projects. This includes experience in research, modelling, visualization, drafting, and implementation.
+
+Excellent skills in Rhinoceros, SideFX Houdini, Blender, and AI-integrated design workflows.
+
+Educational Track:
+Kadıköy Anatolian High School [TR] [2015]
+Krakow University of Technology ERASMUS+ [PL] [2017–2018]
+Istanbul Technical University BA Architecture [TR] [2020]
+KU Leuven MSc Architecture [BE] [2023]
+
+Work Experience:
+Hagia Sophia Museum restoration project [TR] [2017]
+Selimiye Military Quarters restoration [TR] [2017]
+MAA [TR] [2020] [computational designer]
+RMI construction site [TR] [2019]
+Urban Atolye [TR] [2020–2021] [research associate]
+Studio Tuin En Wereld [BE] [2024]
+Co-founder ArchiGrad with Joris Putteneers [TH] [2023-present]
+Curator DEX Hybrids International Workshops [TH] [2024], co-Curator INDA PARADE: Data Driven [TH] [2025] 
+
+Teaching Experience:
+Lecturer at Chulalongkorn University [TH] [2024-present]
+DEX workshop [TH] [2024]
+
+Languages:
+Turkish [native], English [fluent]
+  </p>
+</section>
+
   </main>
+
+<div id="imageOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center;">
+  <button id="overlayPrev" style="position:absolute;left:2vw;top:50%;transform:translateY(-50%);font-size:2.6rem;background:none;border:none;color:#fff;cursor:pointer;opacity:0.7;">&#8592;</button>
+  <img id="overlayImg" src="" alt="Image Preview" style="max-width:90vw; max-height:90vh; box-shadow:0 0 32px #000b; background:transparent; border-radius:1em;">
+  <button id="overlayNext" style="position:absolute;right:2vw;top:50%;transform:translateY(-50%);font-size:2.6rem;background:none;border:none;color:#fff;cursor:pointer;opacity:0.7;">&#8594;</button>
+</div>
 
 <script src="script.js"></script>
 

@@ -57,13 +57,18 @@ function renderGallery(currentLevel, stack) {
 }
 
 function renderImages(folder) {
-  folder.images?.forEach(img => {
+  const imageList = (folder.images || []).map(img => `projects/${folder.path}/${img}`);
+  (folder.images || []).forEach((img, i) => {
     const card = document.createElement("div");
     card.className = "project-card";
-    card.innerHTML = `<img src="projects/${folder.path}/${img}" alt="${img}">`;
+    const src = `projects/${folder.path}/${img}`;
+    card.innerHTML = `<img src="${src}" alt="${img}">`;
+    card.onclick = () => showImageModal(src, img, imageList, i);
     gallery.appendChild(card);
   });
 }
+
+
 
 function renderVideos(folder) {
   folder.videos?.forEach(video => {
@@ -170,3 +175,60 @@ function resolveNode(nodes, pathStack) {
   }
   return current;
 }
+
+
+const overlayPrev = document.getElementById("overlayPrev");
+const overlayNext = document.getElementById("overlayNext");
+
+let overlayImages = [];
+let overlayCurrentIndex = 0;
+
+function showImageModal(src, alt, imageList, currentIndex) {
+  overlayImages = imageList || [src];
+  overlayCurrentIndex = (typeof currentIndex === 'number') ? currentIndex : 0;
+  overlayImg.src = overlayImages[overlayCurrentIndex];
+  overlayImg.alt = alt || '';
+  imageOverlay.style.display = "flex";
+  updateOverlayNav();
+}
+
+function updateOverlayNav() {
+  overlayPrev.style.display = (overlayCurrentIndex > 0) ? "" : "none";
+  overlayNext.style.display = (overlayCurrentIndex < overlayImages.length - 1) ? "" : "none";
+}
+
+overlayPrev.onclick = function(e) {
+  e.stopPropagation();
+  if (overlayCurrentIndex > 0) {
+    overlayCurrentIndex--;
+    overlayImg.src = overlayImages[overlayCurrentIndex];
+    updateOverlayNav();
+  }
+};
+
+overlayNext.onclick = function(e) {
+  e.stopPropagation();
+  if (overlayCurrentIndex < overlayImages.length - 1) {
+    overlayCurrentIndex++;
+    overlayImg.src = overlayImages[overlayCurrentIndex];
+    updateOverlayNav();
+  }
+};
+
+// Only close when clicking on dark background, not on image or arrows
+imageOverlay.onclick = function(e) {
+  if (e.target === imageOverlay) {
+    imageOverlay.style.display = "none";
+    overlayImg.src = '';
+    overlayImages = [];
+  }
+};
+
+// Keyboard navigation
+window.addEventListener("keydown", function(e) {
+  if (imageOverlay.style.display === "flex") {
+    if (e.key === "ArrowLeft" && overlayPrev.style.display !== "none") overlayPrev.onclick(e);
+    if (e.key === "ArrowRight" && overlayNext.style.display !== "none") overlayNext.onclick(e);
+    if (e.key === "Escape") imageOverlay.onclick({target:imageOverlay});
+  }
+});
