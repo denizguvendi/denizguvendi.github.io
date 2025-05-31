@@ -1,16 +1,5 @@
 ﻿Y1 DTS1
-	  
 
-	October  2024
-	
-
-Procedural Sections
-An introduction to procedural modelling and sections
-
-
->>
-	Workshop 10
-	>>
 	Design Tools and Skills 1
 	>>
 	Semester 1 - August-December 2024
@@ -18,11 +7,7 @@ An introduction to procedural modelling and sections
 	Instructor:
 Deniz Guvendi
 	>>
-	Coordinator:
-Tom Jenkins
-	>>
-	Faculty Team:
-Bahnfun (Dream) Chittmittrapap, Deniz Guvendi, Hayden Minick, Hseng Tai Lintner,  Joris Putteneers, Stefan Svedberg, Warisara (Nice) Sudswong
+
 	1. Pedagogical Activities
 In Workshop 10 of DTS1, you will learn about modelling, cutting, sectioning, and manipulating 3D models procedurally. The goal is to gain fluency in data-driven design and procedural workflows. 
 2. Objectives
@@ -40,23 +25,6 @@ Chulapat 14, Floor 13 (Studio space)
 17:30 - 18:00 - Attendance Check(Submission on discord)
    3. In-Class Task |   (in Class)
    4. Homework
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -89,32 +57,6 @@ DTS Code_WK10_01_A2.mp4
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Task B.1: SECTION
 
 
@@ -129,199 +71,9 @@ DTS Code_WK10_01_B1.mp4(.gif .jpg .png)
   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Task B.2*: COMPOSITION
-
-
-(1) Experiment with various geometry types. Select and submit one of the iterations (still image/series of drawings in .png, .jpeg, .gif, or .mp4 format).
-
-
-(2) Create a composition using different drawing sets from your selected iteration. Use After Effects or Photoshop to compile videos from sequential images, crop, and organize the overall composition (resolution: 1080px x 1080px; visual format is free).
-
-
-File Naming:
-DTS Code_WK10_01_B2.mp4(.gif .jpg .png)
-DTS Code_WK10_05_B2_Composition.mp4 (if any)
-DTS Code_WK10_05_B2_Composition2.mp4 (if any)
-
-
-
-
-
-
-Required Materials
-
-
-Hardware
-Laptop
-Laptop charger
-Computer mouse with middle wheel <- very important!
-Headphones
-Extension cord (optional but highly recommended)
-
-
-Software
-SideFX Houdini (Apprentice) version: 20.5
-SideFX Labs and Packages (Production Build 20.5)
-Rhinoceros 7 or 8 
-Adobe After Effects / Photoshop (optional)
-  4.   Submissions
-
-
-Material to be submitted should be complete and in accordance with the guidelines presented in class.
-
-
-Task A.1
-(@class) Deliver a screenshot of your procedure on Discord between 17.30-18.00 (If the screenshot is from the early stages of the setup there will a point deduction)
-(1)(@home) Tuesday 15th pick and deliver one of the iterations (still image/series of drawings(.png .jpeg .gif)/(.mp4)
-Tuesday 15th, 8pm.  (see submission link and  form)
-
-
-Task A.2 
-Tuesday 15th, 8pm.  (see submission link and  form)
-(2)Pick and deliver one of the iterations with a turn table animation. (.mp4)
-Render requirements: 200 frames [flipbook or openGL)
-Video requirements: [720x720 pixels] [2 frames per second]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Task B.1
-
-
-Tuesday 15th, 8pm.  (see submission link and  form)
-(3)Tuesday 15th pick and deliver one of the iterations, that contains an indicator of the scale (still image/series of drawings(.png .jpeg .gif)/(.mp4)
-
-
-Task B.2
-
-
-Tuesday 15th, 8pm.  (see submission link and  form)
-(4)Experiment with different geometry types,  pick and deliver one of the iterations (still image/series of drawings(.png .jpeg .gif)/(.mp4)
-(5)Bring different drawing sets from the selected iteration to a composition. Use AfterEffects or Photoshop to make videos from sequential images, to crop, and to organize the overall composition.
-1080px-1080px
-(Except for the resolution the format is free)
-
-
-
-
-
-
-File Naming:
-DTS Code_WK10_01_A1.mp4 (.gif .jpg .png)
-DTS Code_WK10_02_A2.mp4
-DTS Code_WK10_03_B1.mp4 (.gif .jpg .png)
-DTS Code_WK10_04_B2.mp4 (.gif .jpg .png)
-DTS Code_WK10_05_B2_Composition.mp4 (if any)
-DTS Code_WK10_05_B2_Composition2.mp4 (if any)
-
-
-
-
-
-
-Submission Form Link:
->>CLICK HERE<<
-
-
-
-
-Submit the digital copy of your work via this  google form by Tuesday 15th, 8pm.
-
-
-4. Grading Criteria
-All submissions are present and performed according to the instructions defined by the brief procedure.
- 
-Completion
-Timely submission in good condition ……….....……….….. 40%
- 
-Quality
-Conceptual clarity and craftsmanship …..………………….. 60%
-
-
-
-
-The evaluation of craft and effort will focus on the effective use of Houdini's procedural tools, with an emphasis on personal artistic expression and experimentation. While a basic understanding of technical skills is essential, the goal is to push the boundaries of architectural representation through individual interpretations. Deliverables should demonstrate creativity in both static and animated outputs.
-             
-Keywords
-
-
 This is a list of words that will be used in class and you should familiarise with: 
 
 
 procedural,computational, node, attribute, network, data, data-driven, animating, speculating, clipping, scale, boolean, overlay, composition, hierarchy
 
-
-Supporting Material
-Some platforms you can download 3d models:
-Sketchup Warehouse  Sketchfab  Free3d
-
-
-
-
-
-
-
-
-	 of 
-	  
-
-	 |International Program in Design + Architecture | Room 409, Architecture Building. Faculty of Architecture, Chulalongkorn University. Phayathai Road, Bangkok 10330 Thailand |
+ |International Program in Design + Architecture | Room 409, Architecture Building. Faculty of Architecture, Chulalongkorn University. Phayathai Road, Bangkok 10330 Thailand |

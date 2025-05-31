@@ -1,14 +1,5 @@
 ﻿Y1 DTS2
-	  
 
-	Spring 2025
-	
-
-Week 01   
-Digital Film Making
-
-
->>
 	Digital Making Workshop 
 	>>
 	Design Tools and Skills 2
@@ -18,9 +9,7 @@ Digital Film Making
 	Instructor:
 Deniz Guvendi
 Joris Putteneers
-	>>
-	Coordinator:
-Tom Jenkins
+
 	Introduction
 The Digital Making workshop focuses on the process of translating complex ideas into visually compelling narratives through the creation of a concise 1-minute video project. Over the course of three weeks, students will engage in multimedia storytelling.  
 We will work through every stage of the production process, including storyboarding, compositional planning, 3D modeling, rendering, and post-production. The curriculum encourages a balance between technical proficiency and creative exploration, guiding students to articulate complex concepts effectively through visual media.
@@ -82,63 +71,4 @@ The course prioritizes personal artistic expression and creative interpretation.
 Pro Tips
 Keywords: #procedural #node #attribute #data-driven #rendering #compositing #storytelling #narrative #storyboarding #cinematography #visual-composition #blender #houdini #after-effects #depth of field #aspect-ratio #fps (frame per second) #ambient occlusion #opengl #uv-mapping #camera-animation #motion-design #sound-integration #color-grading #frame-interpolation #visual-effects #temporal-dynamics #spatial-composition #experimental-visualization #multimedia-storytelling #creative-interpretation 
 
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Models in the scene: Kitbash3d Cargo kits, Sketchfab .fbx, .glb models, Mixamo
-Blender 4.3
-________________
-
-
-
-
-
-
-
-
-	 of 
-	  
-
-	 |International Program in Design + Architecture | Room 409, Architecture Building. Faculty of Architecture, Chulalongkorn University. Phayathai Road, Bangkok 10330 Thailand |
+|International Program in Design + Architecture | Room 409, Architecture Building. Faculty of Architecture, Chulalongkorn University. Phayathai Road, Bangkok 10330 Thailand |

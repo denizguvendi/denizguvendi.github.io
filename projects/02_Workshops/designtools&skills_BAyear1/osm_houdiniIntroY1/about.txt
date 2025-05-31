@@ -1,51 +1,21 @@
 ﻿Y1 DTS1
-	  
 
-	September 2024
-	
-
-Mapping, tracking, simulating
-An introduction to mapping and animating with Houdini, and After Effects
-
-
-
-
->>
-	Workshop 7
-	>>
 	Design Tools and Skills 1
 	>>
 	Semester 1 - August-December 2024
 	>>
 	Instructor:
 Deniz Guvendi
-	>>
-	Coordinator:
-Tom Jenkins
-	>>
-	Faculty Team:
-Bahnfun (Dream) Chittmittrapap, Deniz Guvendi, Hayden Minick, Hseng Tai Lintner,  Joris Putteneers, Stefan Svedberg, Warisara (Nice) Sudswong.
+
 	1. Pedagogical Activities
 In Workshop 7 of DTS1, you will explore mapping, tracing, and simulating urban spaces using Houdini, Rhino and After Effects. This workshop introduces both theoretical and practical concepts, guiding you through data extraction from OpenStreetMap and how to generate 3D site models with added complexity such as tree placement, human simulation, and vehicle traffic.
 Through this process, you will be introduced to the fundamentals of Houdini, the procedural modeling software, while also learning about data types, procedural modeling, and basic animation techniques. The course emphasizes the connection between 2D and 3D mapping in Rhino and Houdini, and you will visualize and present your work using After Effects.
 
 
-  
 
 OSM Houdini
 2. Objectives
 You will learn Houdini basics, including procedural modeling, data types, and geometry management. They will use LABS tools like OpenStreetMap, Building Generator, and Roads Generator to create 3D site models. Through basic animation, you will simulate human and vehicle movements, and render using OpenGL and Flipbook. Integrating Rhino and Houdini, you will export-import models and finalize a narrative-driven video in After Effects.
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -82,17 +52,6 @@ Import and refine OpenStreetMap data to create a basic 3D site model using Houdi
 10. box_clip: Clip your model to define specific regions.
 11. turntable: Create a turntable render of your model.
 
-
-
-
-
-
-
-
-
-
-
-
 Task A.2: Populate Trees-Turn 
 Table-Flipbook  Render   
 (2.5 Hours)
@@ -124,8 +83,6 @@ Houdini_ Trees and The Object Placement: Use the following nodes to place and  m
 18. polyreduce: This node reduces the polygon count of your model, optimizing it for better performance while preserving essential details.
 19. matchsize: Ensure all elements are scaled correctly.
 20. turntable: Prepare a turntable render to showcase the site model with populated trees and your design.
-
-
 
 
 Task B: Simulate and Track 
@@ -164,17 +121,6 @@ Preparing the routes for agents:
 Required Materials
 
 
-Hardware
-Laptop
-Laptop charger
-Computer mouse with middle wheel <- very important!
-Headphones
-Extension cord (optional but highly recommended)
-
-
-3D objects and drawings from DTS or/and studio project
-
-
 Software
 SideFX Houdini (Apprentice) version: 20.5
 SideFX Labs and Packages (Production Build 20.5)
@@ -182,71 +128,6 @@ Rhinoceros 7 or 8
 Adobe After Effects (optional)
 
 
-4.   Submissions
-
-
-Material to be submitted should be complete and in accordance with the guidelines presented in class.
-
-
-Task A.1 - A.2 (in class)
-
-
-Upload a screenshot of your site model or  Flipbook render screenshot to discord under your DTS group tutorial upload #group-xxx between 17:30-18:00.
-
-
-
-
-Task A.2 
-
-
-Tuesday 25th, 8pm.  (see submission link and  form)
-
-
-Upload the turntable video using the submission form
-
-
-Render requirements: 200 frames [flipbook or openGL)
-Video requirements: [720x720 pixels] [24 frames per second]
-
-
-
-
-Task B 
-
-
-Tuesday 25th, 8pm.  (see submission link and  form)
-
-
-Upload the Tracking Agent/Car  video using the submission form
-
-
-Render requirements: 500 frames [flipbook or openGL)
-Video requirements: [1920x1080pixels] [24 frames per second]
-
-
-File Naming:
-DTS Code_WK07_01_TurnTable.mp4
-DTS Code_WK07_02_Simulation.mp4
-
-
-Submission Form Link:
->>CLICK HERE<<
-
-
-Submit the digital copy of your work via this google form by Tuesday 25th, 8pm.
-4. Grading Criteria
-All submissions are present and performed according to the instructions defined by the brief procedure.
- 
-Completion
-Timely submission in good condition ……….....……….….. 40%
- 
-Quality
-Conceptual clarity and craftsmanship …..………………….. 60%
-
-
-
-
-Craft and quality of effort is evaluated based on the efficient use of Houdini's Labs tools for urban modeling, creative mapping, and simulation. While basic technical skills are necessary, the emphasis is on personal artistic expression and personal interpretations of urban environments. Deliverables should showcase individual creativity and experimental approaches in both static and animated outputs.
               Keywords
 This is a list of words that will be used in class and you should familiarise with: 
 
@@ -254,24 +135,4 @@ This is a list of words that will be used in class and you should familiarise wi
 procedural,vectorial, node, attribute, network, data, data-driven, osm, mapping, tracking, simulating, animating, speculating
 See ‘a. b. … to … nn. oo.’ To get familiar with the nodes used for this exercise
 
-
-Supporting Material
-
-
-Houdini Interface SideFX tutorial
-Introduction to Houdini
-Animated Agents Mixamo Adobe
-Some platforms you can download 3d models:
-Sketchup Warehouse  Sketchfab  Free3d
-
-
-
-
-
-
-
-
-	 of 
-	  
-
-	 |International Program in Design + Architecture | Room 409, Architecture Building. Faculty of Architecture, Chulalongkorn University. Phayathai Road, Bangkok 10330 Thailand |
+|International Program in Design + Architecture | Room 409, Architecture Building. Faculty of Architecture, Chulalongkorn University. Phayathai Road, Bangkok 10330 Thailand |
