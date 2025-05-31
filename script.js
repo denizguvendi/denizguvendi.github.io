@@ -1,19 +1,10 @@
 const gallery = document.getElementById("gallery");
 
-const customTitles = {
-  "dex.txt": "DEX",
-  "climatedesignstudio.txt": "Water",
-  "masterslave.txt": "DEX – Master / Slave",
-  "a-shopping-plague.txt": "A Shopping Plague",
-  "earlierworks.txt": "works",
-  "paradegame.txt": "INDA_PARADE_game#1",
-  "archigrad.txt": "archigrad",
-  "a-shopping-plague-thesis.txt": "A Shopping Plague Genk",
-  "masterplan.txt": "Masterplan Competition Belgium"
-};
-
 let fullTree = [];
 let currentStack = [];
+
+let overlayImages = [];
+let overlayCurrentIndex = 0;
 
 fetch("files.json")
   .then(res => res.json())
@@ -23,27 +14,48 @@ fetch("files.json")
   })
   .catch(err => console.error("Failed to load files.json", err));
 
+// ======== MAIN GALLERY RENDERING ========
+
 function renderGallery(currentLevel, stack) {
   gallery.innerHTML = "";
   currentStack = stack;
   const currentFolder = stack[stack.length - 1] || null;
 
-const folderAboutDiv = document.getElementById('folderAbout');
-folderAboutDiv.innerHTML = ""; // Always clear on navigation
+  // ----- About Section -----
+  const folderAboutDiv = document.getElementById('folderAbout');
+  folderAboutDiv.innerHTML = "";
+  let aboutFile = null;
+  if (currentFolder && currentFolder.embeds) {
+    if (currentFolder.embeds.includes("about.txt")) {
+      aboutFile = "about.txt";
+    } else if (currentFolder.embeds.includes("about.docx")) {
+      aboutFile = "about.docx";
+    }
+  }
+  if (aboutFile) {
+    if (aboutFile.endsWith(".txt")) {
+      fetch(`projects/${currentFolder.path}/${aboutFile}`)
+        .then(res => res.text())
+        .then(text => {
+          folderAboutDiv.innerHTML = `<div class="folder-about-content">${text.trim()}</div>`;
+        })
+        .catch(() => {
+          folderAboutDiv.innerHTML = `<div class="folder-about-content">[${aboutFile} could not be loaded]</div>`;
+        });
+    } else if (aboutFile.endsWith(".docx")) {
+      fetch(`projects/${currentFolder.path}/${aboutFile}`)
+        .then(response => response.blob())
+        .then(blob => mammoth.convertToHtml({arrayBuffer: blob}))
+        .then(result => {
+          folderAboutDiv.innerHTML = `<div class="folder-about-content">${result.value}</div>`;
+        })
+        .catch(() => {
+          folderAboutDiv.innerHTML = `<div class="folder-about-content">[${aboutFile} could not be loaded]</div>`;
+        });
+    }
+  }
 
-if (currentFolder && currentFolder.embeds && currentFolder.embeds.includes("about.txt")) {
-  fetch(`projects/${currentFolder.path}/about.txt`)
-    .then(res => res.text())
-    .then(text => {
-      folderAboutDiv.innerHTML = `<div class="folder-about-content">${text.trim()}</div>`;
-    })
-    .catch(() => {
-      folderAboutDiv.innerHTML = `<div class="folder-about-content">[about.txt could not be loaded]</div>`;
-    });
-}
-
-
-  // (The rest is unchanged)
+  // ----- Folders -----
   currentLevel.forEach(node => {
     if (node.type === "folder") {
       const previewImage = getRandomImage(node);
@@ -62,6 +74,7 @@ if (currentFolder && currentFolder.embeds && currentFolder.embeds.includes("abou
     }
   });
 
+  // ----- Files (Images, Videos, PDFs, Embeds) -----
   if (currentFolder) {
     renderImages(currentFolder);
     renderVideos(currentFolder);
@@ -72,16 +85,7 @@ if (currentFolder && currentFolder.embeds && currentFolder.embeds.includes("abou
   addOrRemoveBackButton(stack);
 }
 
-
-  if (currentFolder) {
-    renderImages(currentFolder);
-    renderVideos(currentFolder);
-    renderPDFs(currentFolder);
-    renderEmbeds(currentFolder);
-  }
-
-  addOrRemoveBackButton(stack);
-
+// ======== FILE RENDERERS ========
 
 function renderImages(folder) {
   const imageList = (folder.images || []).map(img => `projects/${folder.path}/${img}`);
@@ -94,8 +98,6 @@ function renderImages(folder) {
     gallery.appendChild(card);
   });
 }
-
-
 
 function renderVideos(folder) {
   folder.videos?.forEach(video => {
@@ -126,12 +128,15 @@ function renderPDFs(folder) {
 
 function renderEmbeds(folder) {
   folder.embeds?.forEach(txtFile => {
+    // Skip about.txt/about.docx here (handled above)
+    if (txtFile.toLowerCase() === "about.txt" || txtFile.toLowerCase() === "about.docx") return;
+
     const card = document.createElement("div");
     card.className = "project-card";
     fetch(`projects/${folder.path}/${txtFile}`)
       .then(res => res.text())
       .then(embed => {
-        const title = customTitles[txtFile.toLowerCase()] || txtFile.replace(".txt", "");
+        const title = txtFile.replace(/\.txt$/i, "").replace(/[-_]/g, " ");
         card.innerHTML = `
           <div class="embed-wrapper">${embed}</div>
           <h3>${title}</h3>
@@ -144,6 +149,8 @@ function renderEmbeds(folder) {
       });
   });
 }
+
+// ======== UTILITIES ========
 
 function getRandomImage(folder) {
   if (folder.images?.length > 0) {
@@ -203,14 +210,12 @@ function resolveNode(nodes, pathStack) {
   return current;
 }
 
+// ======== IMAGE OVERLAY LOGIC ========
 
 const imageOverlay = document.getElementById("imageOverlay");
 const overlayImg = document.getElementById("overlayImg");
 const overlayPrev = document.getElementById("overlayPrev");
 const overlayNext = document.getElementById("overlayNext");
-
-let overlayImages = [];
-let overlayCurrentIndex = 0;
 
 function showImageModal(src, alt, imageList, currentIndex) {
   overlayImages = imageList || [src];

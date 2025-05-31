@@ -1,0 +1,4 @@
+Hey there! 👋 We are ArchiGrad.io, a high-tech, open-source, international operation dedicated to making architecture informed.
+
+What Do We Do?
+We specialize in real-time architecture computing. We analyze and visualize concealed data. Our mission is to identify, analyze, and propose a solution to underperforming areas in your infrastructure. This includes analyzing human circulation trajectories, locating hidden colbridges, thermal leaks or moisture, small or large-scale sound performance analysis, optimal airflow predictions for data centers, air quality control, and gas leaks, WiFi coverage predictions.

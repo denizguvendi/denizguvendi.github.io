@@ -33,8 +33,8 @@
     "embeds": [],
     "children": [
       {
-        "name": "DEX_archigrad",
-        "path": "02_Workshops/DEX_archigrad",
+        "name": "DEX_masterslave_BAyear3",
+        "path": "02_Workshops/DEX_masterslave_BAyear3",
         "type": "folder",
         "images": [
           "1.jpg",
@@ -51,18 +51,19 @@
         ],
         "videos": [],
         "pdfs": [],
-        "embeds": [],
+        "embeds": [
+          "about.txt"
+        ],
         "children": []
       },
       {
-        "name": "designbuild",
-        "path": "02_Workshops/designbuild",
+        "name": "designbuild_BAyear2",
+        "path": "02_Workshops/designbuild_BAyear2",
         "type": "folder",
         "images": [
           "DB2025_WAYFINDING__page_000.png",
           "DB2025_WAYFINDING__page_001.png",
-          "DB2025_WAYFINDING__page_003.png",
-          "Layer 3.png"
+          "DB2025_WAYFINDING__page_003.png"
         ],
         "videos": [],
         "pdfs": [],
@@ -70,44 +71,46 @@
         "children": []
       },
       {
-        "name": "designtools&skills_ws",
-        "path": "02_Workshops/designtools&skills_ws",
+        "name": "designtools&skills_BAyear1",
+        "path": "02_Workshops/designtools&skills_BAyear1",
         "type": "folder",
         "images": [
-          "Screenshot 2024-09-03 010856.png",
-          "Screenshot 2024-09-03 125416.png",
-          "patternbrudsh-01.jpg"
+          "illustrator_patternbrush.jpg",
+          "patternbrush.png",
+          "uv.png"
         ],
         "videos": [],
         "pdfs": [],
         "embeds": [],
         "children": [
           {
-            "name": "digitalmaking",
-            "path": "02_Workshops/designtools&skills_ws/digitalmaking",
+            "name": "digitalmaking_BlenderIntroY1",
+            "path": "02_Workshops/designtools&skills_BAyear1/digitalmaking_BlenderIntroY1",
             "type": "folder",
             "images": [
-              "Screenshot 2025-03-27 121026.png",
-              "Screenshot 2025-03-27 121101.png",
-              "Screenshot 2025-03-27 121115.png",
-              "Screenshot 2025-03-27 121132.png",
-              "Screenshot 2025-03-27 121243.png",
-              "Screenshot 2025-03-27 121255.png",
-              "Screenshot 2025-03-27 121304.png",
-              "Screenshot 2025-03-27 121333.png",
-              "Screenshot 2025-03-27 121341.png",
-              "Screenshot 2025-03-27 121602.png",
-              "Screenshot 2025-03-27 121802.png",
-              "Screenshot 2025-03-27 122026.png"
+              "10761.png",
+              "10962.png",
+              "Screenshot 2025-01-27 003118.png",
+              "Screenshot 2025-01-27 010105.png",
+              "Screenshot 2025-01-27 010306.png",
+              "Screenshot 2025-01-27 010624.png",
+              "Screenshot 2025-01-27 011925.png",
+              "Screenshot 2025-01-27 013749.png",
+              "Screenshot 2025-01-27 013859.png",
+              "Screenshot 2025-01-27 021808.png",
+              "Screenshot 2025-01-27 022040.png",
+              "Screenshot 2025-01-27 170849.png"
             ],
             "videos": [],
             "pdfs": [],
-            "embeds": [],
+            "embeds": [
+              "about.txt"
+            ],
             "children": []
           },
           {
-            "name": "osm",
-            "path": "02_Workshops/designtools&skills_ws/osm",
+            "name": "osm_houdiniIntroY1",
+            "path": "02_Workshops/designtools&skills_BAyear1/osm_houdiniIntroY1",
             "type": "folder",
             "images": [
               "1.jpg",
@@ -121,21 +124,29 @@
             ],
             "videos": [],
             "pdfs": [],
-            "embeds": [],
+            "embeds": [
+              "about.txt"
+            ],
             "children": []
           },
           {
-            "name": "update3",
-            "path": "02_Workshops/designtools&skills_ws/update3",
+            "name": "procedural_introY1",
+            "path": "02_Workshops/designtools&skills_BAyear1/procedural_introY1",
             "type": "folder",
             "images": [
-              "Screenshot 2024-10-08 221639.png",
-              "Screenshot 2024-10-08 224341.png",
-              "Screenshot 2024-10-08 231523.png"
+              "villa-explode.gif",
+              "villasavoye_exp1_xyz_1.jpg"
             ],
-            "videos": [],
+            "videos": [
+              "1selecteda1_0 (2).mp4",
+              "select-b2-exp (2).mp4",
+              "select-b2-exp (4).mp4",
+              "select-b2composition (1).mp4"
+            ],
             "pdfs": [],
-            "embeds": [],
+            "embeds": [
+              "about.txt"
+            ],
             "children": []
           }
         ]
@@ -152,8 +163,8 @@
     "embeds": [],
     "children": [
       {
-        "name": "00_INDA-PARADE",
-        "path": "03_Curation/00_INDA-PARADE",
+        "name": "INDA-PARADE",
+        "path": "03_Curation/INDA-PARADE",
         "type": "folder",
         "images": [
           "0.png",
@@ -165,6 +176,28 @@
           "Screenshot 2025-03-22 205100.png",
           "Screenshot 2025-03-22 205113.png",
           "Screenshot 2025-03-22 205427.png",
+          "Screenshot 2025-04-16 213749.png",
+          "Screenshot 2025-04-16 213926.png",
+          "Screenshot 2025-04-16 214054.png",
+          "Screenshot 2025-04-16 214124.png",
+          "Screenshot 2025-04-16 214248.png",
+          "Screenshot 2025-04-16 214341.png",
+          "Screenshot 2025-04-16 214744.png",
+          "Screenshot 2025-04-16 214810.png",
+          "Screenshot 2025-04-16 214853.png",
+          "Screenshot 2025-04-16 215545.png",
+          "Screenshot 2025-04-16 215729.png",
+          "Screenshot 2025-04-16 215805.png",
+          "Screenshot 2025-04-16 215819.png",
+          "Screenshot 2025-04-16 220009.png",
+          "Screenshot 2025-04-16 220040.png",
+          "Screenshot 2025-04-16 220044.png",
+          "Screenshot 2025-04-16 220048.png",
+          "Screenshot 2025-04-16 220052.png",
+          "Screenshot 2025-04-16 220131.png",
+          "Screenshot 2025-04-16 220312.png",
+          "Screenshot 2025-04-16 220319.png",
+          "Screenshot 2025-04-16 220402.png",
           "Screenshot 2025-04-22 231520.png",
           "Screenshot 2025-04-23 220930.png",
           "Screenshot 2025-04-27 122734.png",
@@ -201,7 +234,7 @@
         "children": [
           {
             "name": "LED_joris",
-            "path": "03_Curation/00_INDA-PARADE/LED_joris",
+            "path": "03_Curation/INDA-PARADE/LED_joris",
             "type": "folder",
             "images": [
               "Screenshot 2025-04-22 231329.png",
@@ -295,7 +328,7 @@
           },
           {
             "name": "game#1_joris",
-            "path": "03_Curation/00_INDA-PARADE/game#1_joris",
+            "path": "03_Curation/INDA-PARADE/game#1_joris",
             "type": "folder",
             "images": [
               "Screenshot 2025-04-16 213810.png",
@@ -309,7 +342,7 @@
           },
           {
             "name": "game#2",
-            "path": "03_Curation/00_INDA-PARADE/game#2",
+            "path": "03_Curation/INDA-PARADE/game#2",
             "type": "folder",
             "images": [
               "Screenshot 2025-03-03 141039.png",
@@ -489,17 +522,33 @@
     "name": "05_Colab",
     "path": "05_Colab",
     "type": "folder",
-    "images": [
-      "Screenshot 2025-05-29 200835.png",
-      "kai-pat-pers_\u00c7al\u0131\u015fma Y\u00fczeyi 1.jpg"
-    ],
+    "images": [],
     "videos": [],
     "pdfs": [],
     "embeds": [],
     "children": [
       {
-        "name": "03_Kumtich Masterplan_STTUW-Latitude",
-        "path": "05_Colab/03_Kumtich Masterplan_STTUW-Latitude",
+        "name": "MAA",
+        "path": "05_Colab/MAA",
+        "type": "folder",
+        "images": [
+          "Screenshot 2025-05-29 170256.png",
+          "Screenshot 2025-05-29 171253.png",
+          "Screenshot 2025-05-29 172929.png",
+          "Screenshot 2025-05-29 173259.png",
+          "Screenshot 2025-05-29 174849.png",
+          "Screenshot 2025-05-29 175316.png",
+          "Screenshot 2025-05-29 180054.png",
+          "Screenshot 2025-05-29 201125.png"
+        ],
+        "videos": [],
+        "pdfs": [],
+        "embeds": [],
+        "children": []
+      },
+      {
+        "name": "STTUW-Latitude",
+        "path": "05_Colab/STTUW-Latitude",
         "type": "folder",
         "images": [
           "10.jpg",
@@ -523,40 +572,6 @@
         "children": []
       },
       {
-        "name": "06_Kayseri",
-        "path": "05_Colab/06_Kayseri",
-        "type": "folder",
-        "images": [
-          "1.jpg",
-          "2.jpg",
-          "4.jpg",
-          "5.jpg"
-        ],
-        "videos": [],
-        "pdfs": [],
-        "embeds": [],
-        "children": []
-      },
-      {
-        "name": "MAA",
-        "path": "05_Colab/MAA",
-        "type": "folder",
-        "images": [
-          "Screenshot 2025-05-29 170256.png",
-          "Screenshot 2025-05-29 171253.png",
-          "Screenshot 2025-05-29 172929.png",
-          "Screenshot 2025-05-29 173259.png",
-          "Screenshot 2025-05-29 174849.png",
-          "Screenshot 2025-05-29 175316.png",
-          "Screenshot 2025-05-29 180054.png",
-          "Screenshot 2025-05-29 201125.png"
-        ],
-        "videos": [],
-        "pdfs": [],
-        "embeds": [],
-        "children": []
-      },
-      {
         "name": "UA",
         "path": "05_Colab/UA",
         "type": "folder",
@@ -569,6 +584,23 @@
           "Screenshot 2025-05-29 173820.png",
           "Screenshot 2025-05-29 173859.png",
           "Screenshot 2025-05-29 174115.png"
+        ],
+        "videos": [],
+        "pdfs": [],
+        "embeds": [],
+        "children": []
+      },
+      {
+        "name": "other",
+        "path": "05_Colab/other",
+        "type": "folder",
+        "images": [
+          "1.jpg",
+          "2.jpg",
+          "4.jpg",
+          "5.jpg",
+          "gabion.jpg",
+          "plan.png"
         ],
         "videos": [],
         "pdfs": [],

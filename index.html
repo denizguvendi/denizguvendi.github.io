@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Deniz Güvendi – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/mammoth@1.0.0-browser/dist/mammoth.browser.min.js"></script>
   <style>
     * {
       margin: 0;
@@ -25,14 +26,20 @@
       text-align: center;
     }
 
-    nav a {
-      margin: 0 1rem;
-      color: #aaa;
-      text-decoration: none;
-      font-weight: bold;
+    #aboutBtn {
+      font-size:1rem;
+      padding:0 0.7em;
+      background:#111;
+      border:0;
+      color:#aaa;
+      border-radius:0px;
+      cursor:pointer;
+      font-family:inherit;
+      margin-left:2em;
+      vertical-align: middle;
     }
 
-    nav a:hover {
+    #aboutBtn:hover {
       color: #fff;
     }
 
@@ -47,6 +54,7 @@
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
     }
+
     .folder-about-content {
       background: #00000000;
       color: #fff;
@@ -78,6 +86,7 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      position: relative;
     }
 
     .project-card img {
@@ -99,47 +108,94 @@
       bottom: 0;
     }
 
-  
     .project-card-wrapper {
       position: relative;
     }
   
-#back-btn-wrapper {
-  position: fixed;
-  top: 24px;
-  left: 24px;
-  z-index: 1000;
-}
+    #back-btn-wrapper {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      z-index: 1000;
+    }
 
-#back-btn {
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
+    #back-btn {
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
 
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.embed-wrapper {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-}
+    .embed-wrapper {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
 
+    /* Overlay styles */
+    #imageOverlay {
+      display:none;
+      position:fixed;
+      top:0; left:0;
+      width:100vw; height:100vh;
+      background:rgba(0,0,0,0.9);
+      z-index:9999;
+      justify-content:center;
+      align-items:center;
+    }
+    #overlayPrev,
+    #overlayNext {
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:2.6rem;
+      background:none;
+      border:none;
+      color:#fff;
+      cursor:pointer;
+      opacity:0.7;
+    }
+    #overlayPrev { left:2vw; }
+    #overlayNext { right:2vw; }
+    #overlayImg {
+      max-width:90vw;
+      max-height:90vh;
+      box-shadow:0 0 32px rgba(0,0,0,0);
+      background:transparent;
+      border-radius:1em;
+    }
 
+    /* About section at bottom */
+    #about {
+      margin-top:1rem;
+      padding:0rem 0rem;
+      background:#18181800;
+      color:#fff;
+      text-align:center;
+    }
+    #about h2 {
+      border-bottom: 1px solid #222;
+    }
+    #about p {
+      white-space:pre-line;
+      font-size:1.0em;
+      max-width:650px;
+      margin:0 auto;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Deniz Güvendi_archigrad.io</h1> <button id="aboutBtn" style="font-size:1rem; padding:0em 0em; background:#111; border:0px solid #33333300; color:#aaa; border-radius:0px; cursor:pointer; font-family:inherit; margin-left:2em;">
-  About
-</button>
+    <h1>Deniz Güvendi_archigrad.io</h1>
+    <button id="aboutBtn">About</button>
     <p>Architect · Istanbul · 🟢Bangkok</p>
   </header>
 
@@ -147,13 +203,12 @@ video {
     <section id="projects">
        <h2>Projects</h2>
        <div id="folderAbout"></div>
-       <div id="folderAbout"></div>
        <div class="gallery" id="gallery"></div>
     </section>
 
-<section id="about" style="margin-top:1rem; padding:0rem 0rem; background:#18181800; color:#fff; text-align:center;">
-  <h2>About</h2>
-  <p style="white-space:pre-line; font-size:1.0em; max-width:650px; margin:0 auto;">
+    <section id="about">
+      <h2>About</h2>
+      <p>
 Deniz Güvendi [TR]:
 
 Licensed architect from Turkey with a practice that focuses on adaptability, circularity, and intelligence shaping the built environment.
@@ -184,18 +239,24 @@ DEX workshop [TH] [2024]
 
 Languages:
 Turkish [native], English [fluent]
-  </p>
-</section>
+      </p>
+    </section>
 
   </main>
 
-<div id="imageOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center;">
-  <button id="overlayPrev" style="position:absolute;left:2vw;top:50%;transform:translateY(-50%);font-size:2.6rem;background:none;border:none;color:#fff;cursor:pointer;opacity:0.7;">&#8592;</button>
-  <img id="overlayImg" src="" alt="Image Preview" style="max-width:90vw; max-height:90vh; box-shadow:0 0 32px rgba(0, 0, 0, 0); background:transparent; border-radius:1em;">
-  <button id="overlayNext" style="position:absolute;right:2vw;top:50%;transform:translateY(-50%);font-size:2.6rem;background:none;border:none;color:#fff;cursor:pointer;opacity:0.7;">&#8594;</button>
-</div>
+  <!-- Image Overlay -->
+  <div id="imageOverlay">
+    <button id="overlayPrev">&#8592;</button>
+    <img id="overlayImg" src="" alt="Image Preview">
+    <button id="overlayNext">&#8594;</button>
+  </div>
 
-<script src="script.js"></script>
-
+  <script>
+    // About button scrolls to the About section
+    document.getElementById("aboutBtn").onclick = function() {
+      document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+    };
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
