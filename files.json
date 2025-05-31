@@ -14,7 +14,6 @@
     "videos": [
       "0_MAIN_1.mp4",
       "Comp1.mp4",
-      "archive - Trim.mp4",
       "programmingesp32.mp4",
       "video_DEX_exhibition_compressed.mp4"
     ],
@@ -61,12 +60,13 @@
         "path": "02_Workshops/designbuild",
         "type": "folder",
         "images": [
+          "DB2025_WAYFINDING__page_000.png",
+          "DB2025_WAYFINDING__page_001.png",
+          "DB2025_WAYFINDING__page_003.png",
           "Layer 3.png"
         ],
         "videos": [],
-        "pdfs": [
-          "DB2025_WAYFINDING_.pdf"
-        ],
+        "pdfs": [],
         "embeds": [],
         "children": []
       },
