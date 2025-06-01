@@ -460,9 +460,12 @@
       "1.gif",
       "2.gif",
       "3.gif",
-      "4.gif"
+      "4.gif",
+      "mappingGenk.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "projecting-dataset.mp4"
+    ],
     "pdfs": [],
     "embeds": [],
     "children": [
