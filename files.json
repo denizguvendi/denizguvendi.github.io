@@ -11,12 +11,7 @@
       "realtimedata.gif",
       "stack.gif"
     ],
-    "videos": [
-      "programmingesp32.mp4",
-      "project.mp4",
-      "realtime-houdini.mp4",
-      "video_DEX_exhibition_compressed.mp4"
-    ],
+    "videos": [],
     "pdfs": [],
     "embeds": [
       "about.txt"
@@ -54,6 +49,19 @@
         "embeds": [
           "about.txt"
         ],
+        "children": []
+      },
+      {
+        "name": "Misfits",
+        "path": "02_Workshops/Misfits",
+        "type": "folder",
+        "images": [
+          "barcelonachair.gif",
+          "barcelonachair.png"
+        ],
+        "videos": [],
+        "pdfs": [],
+        "embeds": [],
         "children": []
       },
       {
@@ -538,9 +546,7 @@
           "Screenshot 2025-05-29 170256.png",
           "Screenshot 2025-05-29 171253.png",
           "Screenshot 2025-05-29 172929.png",
-          "Screenshot 2025-05-29 173259.png",
           "Screenshot 2025-05-29 174849.png",
-          "Screenshot 2025-05-29 175316.png",
           "Screenshot 2025-05-29 180054.png",
           "Screenshot 2025-05-29 201125.png"
         ],
