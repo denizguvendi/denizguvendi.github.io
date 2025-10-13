@@ -80,7 +80,28 @@
     .gallery-sub-2 {
       grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
     }
+    @media (max-width: 768px) {
+  .gallery {
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+  }
 
+  .gallery-main {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .gallery-sub-1 {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .gallery-sub-2 {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+
+  .project-card h3 {
+    font-size: 0.5rem !important;
+  }
+}
     .project-card {
       background: #111;
       border: 0.1px solid #ffffff42;
