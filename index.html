@@ -44,9 +44,8 @@
     }
 
     main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      width: 100%;
+      padding: 2rem 1rem;
     }
 
     h2 {
@@ -59,26 +58,33 @@
       background: #00000000;
       color: #fff;
       padding: 0;
-      margin-bottom: 2rem;
-      border-radius: 0;
+      /* margin-bottom: 2rem; */
+      /* border-radius: 0; */
       font-size: 1.04em;
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-      white-space: pre-line;
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
-      padding-bottom: 4rem;
+    display: grid;
+    gap: 0.5rem;
+    padding-bottom: 1.0rem;
+    }
+
+    .gallery-main {
+      grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
+    }
+
+    .gallery-sub-1 {
+      grid-template-columns: repeat(auto-fill, minmax(12%, 1fr));
+    }
+
+    .gallery-sub-2 {
+      grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
     }
 
     .project-card {
       background: #111;
-      border: 1px solid #333;
-      overflow: hidden;
+      border: 0.1px solid #ffffff42;
+      overflow: visible;
       width: 100%;
       aspect-ratio: 1 / 1;
       display: flex;
@@ -97,12 +103,13 @@
       display: block;
     }
 
-    .project-card h3 {
-      text-align: center;
-      font-size: 1rem;
-      padding: 0.5rem;
-      color: #ccc;
-      background-color: rgba(0,0,0,0.6);
+      .project-card h3 {
+      text-align: left;
+      font-size: 1.0rem;
+      padding: 0.0rem;
+      color: #ffffffde; /* fallback color */
+      mix-blend-mode: difference; /* key line */
+      /* background-color: rgba(0, 0, 0, 0); */
       width: 100%;
       position: absolute;
       bottom: 0;
@@ -176,10 +183,10 @@
     /* About section at bottom */
     #about {
       margin-top:1rem;
-      padding:0rem 0rem;
+      /* padding:0rem 0rem; */
       background:#18181800;
       color:#fff;
-      text-align:center;
+      /* text-align:left; */
     }
     #about h2 {
       border-bottom: 1px solid #222;
@@ -187,16 +194,18 @@
     #about p {
       white-space:pre-line;
       font-size:1.0em;
-      max-width:650px;
-      margin:0 auto;
+      /* max-width:650px;
+      margin:0 auto; */
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Deniz Güvendi_archigrad.io</h1>
+    <h1>Deniz Güvendi  archigrad.io</h1>
     <button id="aboutBtn">About</button>
     <p>Architect · Istanbul · 🟢Bangkok</p>
+
+    <p> guvendi.archigrad@gmail.com </p>
   </header>
 
   <main>
@@ -212,16 +221,16 @@
 Deniz Güvendi [TR]:
 
 Licensed architect from Turkey with a practice that focuses on adaptability, circularity, and intelligence shaping the built environment.
-
 Professional experience includes various roles in architectural design offices, urban design competitions, and restoration projects. This includes experience in research, modelling, visualization, drafting, and implementation.
-
 Excellent skills in Rhinoceros, SideFX Houdini, Blender, and AI-integrated design workflows.
 
+
 Educational Track:
-Kadıköy Anatolian High School [TR] [2015]
-Krakow University of Technology ERASMUS+ [PL] [2017–2018]
-Istanbul Technical University BA Architecture [TR] [2020]
 KU Leuven MSc Architecture [BE] [2023]
+Istanbul Technical University BA Architecture [TR] [2020]
+Kadıköy Anadolu-High School [TR] [2015]
+Krakow University of Technology ERASMUS+ [PL] [2017–2018]
+
 
 Work Experience:
 Hagia Sophia Museum restoration project [TR] [2017]
