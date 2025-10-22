@@ -6,6 +6,9 @@ let allProjects = [];
 
 let overlayImages = [];
 let overlayCurrentIndex = 0;
+let currentImagePath = '';
+let isSubfolder = false;
+let likes = {};
 
 fetch("files.json")
   .then(res => res.json())
@@ -46,7 +49,7 @@ function renderMainPage() {
     card.className = "project-card-wrapper";
     card.innerHTML = `
       <div class="project-card">
-        ${previewImage ? `<img src="projects/${folder.path}/${previewImage}" alt="${folder.name}">` : ""}
+        // ${previewImage ? `<img src="projects/${folder.path}/${previewImage}" alt="${folder.name}">` : ""}
         <h3>${folder.name.replace(/[-_]/g, " ")}</h3>
       </div>
     `;

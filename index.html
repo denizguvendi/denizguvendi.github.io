@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Deniz Güvendi – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/mammoth@1.0.0-browser/dist/mammoth.browser.min.js"></script>
   <style>
     * {
       margin: 0;
@@ -32,7 +31,6 @@
       background:#111;
       border:0;
       color:#aaa;
-      border-radius:0px;
       cursor:pointer;
       font-family:inherit;
       margin-left:2em;
@@ -54,19 +52,40 @@
       margin-bottom: 1rem;
     }
 
-    .folder-about-content {
-      background: #00000000;
+    #sortControls {
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid #333;
+    }
+
+    #sortControls label {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    #sortSelect {
+      background: #111;
+      color: #aaa;
+      border: none;
+      padding: 0.3rem 0.8rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    #sortSelect:hover,
+    #sortSelect:focus {
       color: #fff;
-      padding: 0;
-      /* margin-bottom: 2rem; */
-      /* border-radius: 0; */
-      font-size: 1.04em;
+      outline: none;
     }
 
     .gallery {
-    display: grid;
-    gap: 0.5rem;
-    padding-bottom: 1.0rem;
+      display: grid;
+      gap: 0.5rem;
+      padding-bottom: 1.0rem;
     }
 
     .gallery-main {
@@ -80,28 +99,22 @@
     .gallery-sub-2 {
       grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
     }
+
     @media (max-width: 768px) {
-  .gallery {
-    gap: 0.5rem;
-    padding-bottom: 1rem;
-  }
+      .gallery {
+        gap: 0.5rem;
+      }
+      .gallery-main {
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+      }
+      .gallery-sub-1 {
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+      }
+      .gallery-sub-2 {
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+      }
+    }
 
-  .gallery-main {
-    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-  }
-
-  .gallery-sub-1 {
-    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-  }
-
-  .gallery-sub-2 {
-    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-  }
-
-  .project-card h3 {
-    font-size: 0.5rem !important;
-  }
-}
     .project-card {
       background: #111;
       border: 0.1px solid #ffffff42;
@@ -124,22 +137,26 @@
       display: block;
     }
 
-      .project-card h3 {
+    .project-card h3 {
       text-align: left;
       font-size: 1.0rem;
       padding: 0.0rem;
-      color: #ffffffde; /* fallback color */
-      mix-blend-mode: difference; /* key line */
-      /* background-color: rgba(0, 0, 0, 0); */
+      color: #ffffffde;
+      mix-blend-mode: difference;
       width: 100%;
       position: absolute;
       bottom: 0;
     }
 
-    .project-card-wrapper {
-      position: relative;
+    .like-badge {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: rgba(0,0,0,0.7);
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
     }
-  
+
     #back-btn-wrapper {
       position: fixed;
       top: 24px;
@@ -155,20 +172,6 @@
       cursor: pointer;
     }
 
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .embed-wrapper {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-    }
-
-    /* Overlay styles */
     #imageOverlay {
       display:none;
       position:fixed;
@@ -179,6 +182,7 @@
       justify-content:center;
       align-items:center;
     }
+
     #overlayPrev,
     #overlayNext {
       position:absolute;
@@ -191,32 +195,50 @@
       cursor:pointer;
       opacity:0.7;
     }
+
     #overlayPrev { left:2vw; }
     #overlayNext { right:2vw; }
+
     #overlayImg {
       max-width:90vw;
       max-height:90vh;
-      box-shadow:0 0 32px rgba(0,0,0,0);
-      background:transparent;
       border-radius:1em;
+      cursor:pointer;
     }
 
-    /* About section at bottom */
+    #likeBtn {
+      position:absolute;
+      bottom:10vh;
+      right:5vw;
+      padding:0.5rem 1rem;
+      background:none;
+      border:2px solid #fff;
+      color:#000000;
+      font-family:'Roboto Mono',monospace;
+      font-weight:bold;
+      font-size:1rem;
+      cursor:pointer;
+      transition:all 0.2s;
+    }
+
+    #likeBtn:hover {
+      background:#57575780;
+      color:#000;
+    }
+
     #about {
       margin-top:1rem;
-      /* padding:0rem 0rem; */
       background:#18181800;
       color:#fff;
-      /* text-align:left; */
     }
+
     #about h2 {
       border-bottom: 1px solid #222;
     }
+
     #about p {
       white-space:pre-line;
       font-size:1.0em;
-      /* max-width:650px;
-      margin:0 auto; */
     }
   </style>
 </head>
@@ -228,10 +250,20 @@
     <p style="font-size: 0.85em;"> guvendi.archigrad@gmail.com </p>
   </header>
 
+  <div id="sortControls">
+    <label for="sortSelect">Sort:</label>
+    <select id="sortSelect">
+      <option value="default" selected>Default</option>
+      <option value="likes">Likes</option>
+      <option value="luminance">Brightness</option>
+      <option value="size">Size</option>
+    </select>
+  </div>
+
+
   <main>
     <section id="projects">
        <h2>Projects</h2>
-       <div id="folderAbout"></div>
        <div class="gallery" id="gallery"></div>
     </section>
 
@@ -244,13 +276,11 @@ Licensed architect from Turkey with a practice that focuses on adaptability, cir
 Professional experience includes various roles in architectural design offices, urban design competitions, and restoration projects. This includes experience in research, modelling, visualization, drafting, and implementation.
 Excellent skills in Rhinoceros, SideFX Houdini, Blender, and AI-integrated design workflows.
 
-
 Educational Track:
 KU Leuven MSc Architecture [BE] [2023]
 Istanbul Technical University BA Architecture [TR] [2020]
 Kadıköy Anadolu-High School [TR] [2015]
 Krakow University of Technology ERASMUS+ [PL] [2017–2018]
-
 
 Work Experience:
 Hagia Sophia Museum restoration project [TR] [2017]
@@ -270,22 +300,464 @@ Languages:
 Turkish [native], English [fluent]
       </p>
     </section>
-
   </main>
 
-  <!-- Image Overlay -->
   <div id="imageOverlay">
     <button id="overlayPrev">&#8592;</button>
     <img id="overlayImg" src="" alt="Image Preview">
     <button id="overlayNext">&#8594;</button>
+    <button id="likeBtn">❤️ LIKE (0)</button>
   </div>
 
   <script>
-    // About button scrolls to the About section
+    const gallery = document.getElementById("gallery");
+    let fullTree = [];
+    let currentStack = [];
+    let allProjects = [];
+    let overlayImages = [];
+    let overlayCurrentIndex = 0;
+    let currentImagePath = '';
+    let likes = {};
+    let imageLuminance = {};
+    let imageSizes = {};
+    let currentSort = 'default';
+    let imageObserver = null;
+
+    // Initialize lazy loading observer
+    function initObserver() {
+      imageObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                imageObserver.unobserve(img);
+              }
+            }
+          });
+        },
+        { rootMargin: '100px' }
+      );
+    }
+
+    // Load likes from storage
+    async function loadLikes() {
+      try {
+        const result = await window.storage.get('portfolio-likes');
+        if (result && result.value) {
+          likes = JSON.parse(result.value);
+        }
+      } catch (e) {
+        console.log('No existing likes');
+      }
+    }
+
+    // Save likes to storage
+    async function saveLikes() {
+      try {
+        await window.storage.set('portfolio-likes', JSON.stringify(likes));
+      } catch (e) {
+        console.error('Failed to save likes', e);
+      }
+    }
+
+    // Calculate image luminance
+    function calculateLuminance(img) {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+      
+      try {
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const data = imageData.data;
+        let sum = 0;
+        
+        for (let i = 0; i < data.length; i += 4) {
+          const r = data[i];
+          const g = data[i + 1];
+          const b = data[i + 2];
+          sum += 0.299 * r + 0.587 * g + 0.114 * b;
+        }
+        
+        return sum / (canvas.width * canvas.height);
+      } catch (e) {
+        return 0;
+      }
+    }
+
+    // Handle image load
+    function handleImageLoad(img, src) {
+      const lum = calculateLuminance(img);
+      imageLuminance[src] = lum;
+      
+      fetch(src)
+        .then(res => res.blob())
+        .then(blob => {
+          imageSizes[src] = blob.size;
+        })
+        .catch(() => {});
+    }
+
+    // Sort images based on current sort mode
+    function sortImages(images) {
+      if (currentSort === 'default') return images;
+      
+      return [...images].sort((a, b) => {
+        if (currentSort === 'likes') {
+          const likesA = likes[a.src] || 0;
+          const likesB = likes[b.src] || 0;
+          return likesB - likesA;
+        } else if (currentSort === 'luminance') {
+          const lumA = imageLuminance[a.src] || 0;
+          const lumB = imageLuminance[b.src] || 0;
+          return lumA - lumB;
+        } else if (currentSort === 'size') {
+          const sizeA = imageSizes[a.src] || 0;
+          const sizeB = imageSizes[b.src] || 0;
+          return sizeB - sizeA;
+        }
+        return 0;
+      });
+    }
+
+    // Collect all projects
+    function collectAllProjects(nodes) {
+      nodes.forEach(node => {
+        if (node.type === "folder") {
+          allProjects.push(node);
+          if (node.children) collectAllProjects(node.children);
+        }
+      });
+    }
+
+    // Get random image from folder
+    function getRandomImage(folder) {
+      if (folder.images?.length > 0) {
+        return folder.images[Math.floor(Math.random() * folder.images.length)];
+      }
+      for (const child of folder.children || []) {
+        const childImage = getRandomImage(child);
+        if (childImage) return `${child.name}/${childImage}`;
+      }
+      return null;
+    }
+
+    // Render main page
+    function renderMainPage() {
+      gallery.innerHTML = "";
+      gallery.classList.remove("gallery-sub-1", "gallery-sub-2");
+      gallery.classList.add("gallery-main");
+      currentStack = [];
+
+      const topFolders = fullTree.filter(f => f.type === "folder");
+      const allCards = [];
+
+      allProjects.forEach(project => {
+        (project.images || []).forEach((img, i) => {
+          const src = `projects/${project.path}/${img}`;
+          const imageList = (project.images || []).map(image => `projects/${project.path}/${image}`);
+          allCards.push({
+            src,
+            img,
+            imageList,
+            index: i,
+            folderName: project.name,
+            folderPath: project.path
+          });
+        });
+      });
+
+      // Shuffle images
+      for (let i = allCards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [allCards[i], allCards[j]] = [allCards[j], allCards[i]];
+      }
+
+      // Sort if needed
+      const sortedCards = sortImages(allCards);
+
+      // Render folders first
+      topFolders.forEach(folder => {
+        const previewImage = getRandomImage(folder);
+        const card = document.createElement("div");
+        card.className = "project-card";
+        card.innerHTML = `
+          ${previewImage ? `<img data-src="projects/${folder.path}/${previewImage}" alt="">` : ""}
+          <h3>${folder.name.replace(/[-_]/g, " ")}</h3>
+        `;
+        card.addEventListener("click", () => {
+          renderGallery(folder.children || [], [folder]);
+        });
+        gallery.appendChild(card);
+        
+        if (previewImage) {
+          const img = card.querySelector('img');
+          imageObserver.observe(img);
+        }
+      });
+
+      // Render shuffled images
+      sortedCards.forEach(cardData => {
+        const card = document.createElement("div");
+        card.className = "project-card";
+        const likeCount = likes[cardData.src] || 0;
+        card.innerHTML = `
+          <img data-src="${cardData.src}" alt="">
+          <h3>${cardData.folderName.replace(/[-_]/g, " ")}</h3>
+          ${likeCount > 0 ? `<div class="like-badge">❤️ ${likeCount}</div>` : ''}
+        `;
+        card.onclick = () => showImageModal(cardData.src, cardData.img, cardData.imageList, cardData.index);
+        gallery.appendChild(card);
+        
+        const img = card.querySelector('img');
+        imageObserver.observe(img);
+        img.onload = () => handleImageLoad(img, cardData.src);
+      });
+
+      addOrRemoveBackButton([]);
+    }
+
+    // Render gallery (subfolder view)
+    function renderGallery(currentLevel, stack) {
+      gallery.innerHTML = "";
+      gallery.classList.remove("gallery-main", "gallery-sub-1", "gallery-sub-2");
+      
+      const depth = stack.length;
+      if (depth === 1) {
+        gallery.classList.add("gallery-sub-1");
+      } else if (depth >= 2) {
+        gallery.classList.add("gallery-sub-2");
+      }
+      
+      currentStack = stack;
+      const currentFolder = stack[stack.length - 1] || null;
+
+      // Collect all images from current folder and subfolders
+      const allImages = [];
+      function collectImages(folder) {
+        (folder.images || []).forEach((img, i) => {
+          const src = `projects/${folder.path}/${img}`;
+          const imageList = (folder.images || []).map(image => `projects/${folder.path}/${image}`);
+          allImages.push({ 
+            src, 
+            img, 
+            imageList, 
+            index: i,
+            folderName: folder.name,
+            folderPath: folder.path
+          });
+        });
+        (folder.children || []).forEach(child => collectImages(child));
+      }
+
+      if (currentFolder) {
+        collectImages(currentFolder);
+      }
+
+      // Shuffle images
+      for (let i = allImages.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [allImages[i], allImages[j]] = [allImages[j], allImages[i]];
+      }
+
+      // Sort if needed
+      const sortedImages = sortImages(allImages);
+
+      // Render folders first
+      currentLevel.forEach(node => {
+        if (node.type === "folder") {
+          const previewImage = getRandomImage(node);
+          const card = document.createElement("div");
+          card.className = "project-card";
+          card.innerHTML = `
+            ${previewImage ? `<img data-src="projects/${node.path}/${previewImage}" alt="">` : ""}
+            <h3>${node.name.replace(/[-_]/g, " ")}</h3>
+          `;
+          card.addEventListener("click", () => {
+            renderGallery(node.children || [], [...stack, node]);
+          });
+          gallery.appendChild(card);
+          
+          if (previewImage) {
+            const img = card.querySelector('img');
+            imageObserver.observe(img);
+          }
+        }
+      });
+
+      // Render shuffled images
+      sortedImages.forEach(imgData => {
+        const card = document.createElement("div");
+        card.className = "project-card";
+        const likeCount = likes[imgData.src] || 0;
+        card.innerHTML = `
+          <img data-src="${imgData.src}" alt="">
+          <h3>${imgData.folderName.replace(/[-_]/g, " ")}</h3>
+          ${likeCount > 0 ? `<div class="like-badge">❤️ ${likeCount}</div>` : ''}
+        `;
+        card.onclick = () => showImageModal(imgData.src, imgData.img, imgData.imageList, imgData.index);
+        gallery.appendChild(card);
+        
+        const img = card.querySelector('img');
+        imageObserver.observe(img);
+        img.onload = () => handleImageLoad(img, imgData.src);
+      });
+
+      addOrRemoveBackButton(stack);
+    }
+
+    // Show image modal
+    function showImageModal(src, alt, imageList, currentIndex) {
+      overlayImages = imageList || [src];
+      overlayCurrentIndex = (typeof currentIndex === 'number') ? currentIndex : 0;
+      document.getElementById('overlayImg').src = overlayImages[overlayCurrentIndex];
+      currentImagePath = overlayImages[overlayCurrentIndex];
+      document.getElementById('imageOverlay').style.display = "flex";
+      updateOverlayNav();
+      updateLikeButton();
+    }
+
+    // Update overlay navigation
+    function updateOverlayNav() {
+      document.getElementById('overlayPrev').style.display = (overlayCurrentIndex > 0) ? "" : "none";
+      document.getElementById('overlayNext').style.display = (overlayCurrentIndex < overlayImages.length - 1) ? "" : "none";
+    }
+
+    // Update like button
+    function updateLikeButton() {
+      const likeCount = likes[currentImagePath] || 0;
+      document.getElementById('likeBtn').textContent = `❤️ LIKE (${likeCount})`;
+    }
+
+    // Add or remove back button
+    function addOrRemoveBackButton(stack) {
+      const existing = document.getElementById("back-btn-wrapper");
+      
+      if (stack.length > 0) {
+        if (!existing) {
+          const btnWrapper = document.createElement("div");
+          btnWrapper.id = "back-btn-wrapper";
+          btnWrapper.innerHTML = `<button id="back-btn">◀</button>`;
+          document.body.appendChild(btnWrapper);
+          document.getElementById("back-btn").addEventListener("click", handleBack);
+        }
+      } else {
+        if (existing) existing.remove();
+      }
+    }
+
+    // Handle back button
+    function handleBack() {
+      if (currentStack.length === 1) {
+        renderMainPage();
+      } else {
+        const newStack = [...currentStack];
+        newStack.pop();
+        const parent = newStack[newStack.length - 1];
+        renderGallery(parent?.children || fullTree, newStack);
+      }
+    }
+
+    // Handle like button click
+    async function handleLike() {
+      likes[currentImagePath] = (likes[currentImagePath] || 0) + 1;
+      await saveLikes();
+      updateLikeButton();
+      
+      // Re-render if sorted by likes
+      if (currentSort === 'likes') {
+        if (currentStack.length === 0) {
+          renderMainPage();
+        } else {
+          const currentFolder = currentStack[currentStack.length - 1];
+          renderGallery(currentFolder.children || [], currentStack);
+        }
+      }
+    }
+
+    // Initialize
     document.getElementById("aboutBtn").onclick = function() {
       document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
     };
+//sort buttons
+    document.getElementById('sortSelect').addEventListener('change', function() {
+      currentSort = this.value;
+
+      if (currentStack.length === 0) {
+        renderMainPage();
+      } else {
+        const currentFolder = currentStack[currentStack.length - 1];
+        renderGallery(currentFolder.children || [], currentStack);
+      }
+    });
+
+    // Overlay controls
+    document.getElementById('overlayPrev').onclick = function(e) {
+      e.stopPropagation();
+      if (overlayCurrentIndex > 0) {
+        overlayCurrentIndex--;
+        document.getElementById('overlayImg').src = overlayImages[overlayCurrentIndex];
+        currentImagePath = overlayImages[overlayCurrentIndex];
+        updateOverlayNav();
+        updateLikeButton();
+      }
+    };
+
+    document.getElementById('overlayNext').onclick = function(e) {
+      e.stopPropagation();
+      if (overlayCurrentIndex < overlayImages.length - 1) {
+        overlayCurrentIndex++;
+        document.getElementById('overlayImg').src = overlayImages[overlayCurrentIndex];
+        currentImagePath = overlayImages[overlayCurrentIndex];
+        updateOverlayNav();
+        updateLikeButton();
+      }
+    };
+
+    document.getElementById('imageOverlay').onclick = function(e) {
+      if (e.target === this) {
+        this.style.display = "none";
+        document.getElementById('overlayImg').src = '';
+        overlayImages = [];
+      }
+    };
+
+    document.getElementById('likeBtn').onclick = function(e) {
+      e.stopPropagation();
+      handleLike();
+    };
+
+    window.addEventListener("keydown", function(e) {
+      const overlay = document.getElementById('imageOverlay');
+      if (overlay.style.display === "flex") {
+        if (e.key === "ArrowLeft" && overlayCurrentIndex > 0) {
+          document.getElementById('overlayPrev').click();
+        }
+        if (e.key === "ArrowRight" && overlayCurrentIndex < overlayImages.length - 1) {
+          document.getElementById('overlayNext').click();
+        }
+        if (e.key === "Escape") {
+          overlay.style.display = "none";
+        }
+      }
+    });
+
+    // Load data and initialize
+    initObserver();
+    loadLikes().then(() => {
+      fetch("files.json")
+        .then(res => res.json())
+        .then(data => {
+          fullTree = data;
+          collectAllProjects(data);
+          renderMainPage();
+        })
+        .catch(err => console.error("Failed to load files.json", err));
+    });
   </script>
-  <script src="script.js"></script>
 </body>
 </html>
