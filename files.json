@@ -47,30 +47,60 @@
         "name": "projects",
         "path": "01_archigrad.io/projects",
         "type": "folder",
-        "images": [
-          "sculptor (1).jpg",
-          "sculptor (1).png",
-          "sculptor (10).png",
-          "sculptor (11).png",
-          "sculptor (12).png",
-          "sculptor (13).png",
-          "sculptor (14).png",
-          "sculptor (15).png",
-          "sculptor (2).png",
-          "sculptor (3).jpg",
-          "sculptor (3).png",
-          "sculptor (4).jpg",
-          "sculptor (4).png",
-          "sculptor (5).png",
-          "sculptor (6).png",
-          "sculptor (7).png",
-          "sculptor (8).png",
-          "sculptor (9).png"
-        ],
+        "images": [],
         "videos": [],
         "pdfs": [],
         "embeds": [],
-        "children": []
+        "children": [
+          {
+            "name": "04",
+            "path": "01_archigrad.io/projects/04",
+            "type": "folder",
+            "images": [
+              "sculptor (1).jpg",
+              "sculptor (1).png",
+              "sculptor (10).png",
+              "sculptor (11).png",
+              "sculptor (12).png",
+              "sculptor (13).png",
+              "sculptor (14).png",
+              "sculptor (15).png",
+              "sculptor (2).png",
+              "sculptor (3).jpg",
+              "sculptor (3).png",
+              "sculptor (4).jpg",
+              "sculptor (4).png",
+              "sculptor (5).png",
+              "sculptor (6).png",
+              "sculptor (7).png",
+              "sculptor (8).png",
+              "sculptor (9).png"
+            ],
+            "videos": [],
+            "pdfs": [],
+            "embeds": [],
+            "children": []
+          },
+          {
+            "name": "09",
+            "path": "01_archigrad.io/projects/09",
+            "type": "folder",
+            "images": [
+              "pot (1).jpeg",
+              "pot (2).jpeg",
+              "pot (3).jpeg",
+              "pot (4).jpeg",
+              "pot (5).jpeg",
+              "pot (6).jpeg",
+              "pot (7).jpeg",
+              "pot (8).jpeg"
+            ],
+            "videos": [],
+            "pdfs": [],
+            "embeds": [],
+            "children": []
+          }
+        ]
       }
     ]
   },
@@ -610,8 +640,8 @@
     ]
   },
   {
-    "name": "05_Colab",
-    "path": "05_Colab",
+    "name": "05_Earlier",
+    "path": "05_Earlier",
     "type": "folder",
     "images": [],
     "videos": [],
@@ -619,8 +649,71 @@
     "embeds": [],
     "children": [
       {
+        "name": "Climate",
+        "path": "05_Earlier/Climate",
+        "type": "folder",
+        "images": [
+          "DIA_Facade.jpg",
+          "DIA_ghent.jpg",
+          "DenderRiver_Arche.jpg",
+          "DenderRiver_Floods_BE (2).jpg",
+          "DenderRiver_Floods_BE.jpg",
+          "Dender_imagine.png",
+          "climatic_ghent.jpg",
+          "comp_waterLand.jpg",
+          "comp_waterTreatmentLND.jpg",
+          "detail_waterTreatmentFacade.jpg",
+          "experiment_shaurya_india.jpg"
+        ],
+        "videos": [
+          "realtimedata_ghent.mp4"
+        ],
+        "pdfs": [],
+        "embeds": [],
+        "children": []
+      },
+      {
+        "name": "Interior",
+        "path": "05_Earlier/Interior",
+        "type": "folder",
+        "images": [
+          "moodboard (1).jpg",
+          "moodboard (10).jpg",
+          "moodboard (11).jpg",
+          "moodboard (12).jpg",
+          "moodboard (2).jpg",
+          "moodboard (3).jpg",
+          "moodboard (4).jpg",
+          "moodboard (5).jpg",
+          "moodboard (6).jpg",
+          "moodboard (7).jpg",
+          "moodboard (8).jpg",
+          "moodboard (9).jpg"
+        ],
+        "videos": [],
+        "pdfs": [],
+        "embeds": [],
+        "children": [
+          {
+            "name": "G-house_interior_freelance",
+            "path": "05_Earlier/Interior/G-house_interior_freelance",
+            "type": "folder",
+            "images": [
+              "ghouse (1).gif",
+              "ghouse (1).jpg",
+              "ghouse (2).gif",
+              "ghouse (3).gif"
+            ],
+            "videos": [],
+            "pdfs": [],
+            "embeds": [],
+            "children": []
+          }
+        ]
+      },
+      {
         "name": "MAA",
-        "path": "05_Colab/MAA",
+        "path": "05_Earlier/MAA",
         "type": "folder",
         "images": [
           "DIA.png",
@@ -635,7 +728,7 @@
       },
       {
         "name": "STTUW-Latitude",
-        "path": "05_Colab/STTUW-Latitude",
+        "path": "05_Earlier/STTUW-Latitude",
         "type": "folder",
         "images": [
           "comp_kumtich_BE (1).jpg",
@@ -659,8 +752,30 @@
         "children": []
       },
       {
+        "name": "StudentPortfolio",
+        "path": "05_Earlier/StudentPortfolio",
+        "type": "folder",
+        "images": [
+          "UrbanGame_Halic_BAThesis.jpg",
+          "architectSinan_comp (2).jpg",
+          "architectSinan_comp.jpg",
+          "center_senegal.jpg",
+          "climatic_Ghent_overpoort.jpg",
+          "dender_burcht_floodablepark.jpg",
+          "desert_Konya.jpg",
+          "urbanGame_IST.jpg",
+          "urbanGame_TR.jpg",
+          "urbangame1.gif",
+          "watertreatment_ghent.jpg"
+        ],
+        "videos": [],
+        "pdfs": [],
+        "embeds": [],
+        "children": []
+      },
+      {
         "name": "UA",
-        "path": "05_Colab/UA",
+        "path": "05_Earlier/UA",
         "type": "folder",
         "images": [
           "comp_ArchitectSinan (1).png",
@@ -678,36 +793,8 @@
         "children": []
       },
       {
-        "name": "other",
-        "path": "05_Colab/other",
-        "type": "folder",
-        "images": [
-          "comp_2019 (1).jpg",
-          "comp_2019 (2).jpg",
-          "comp_2019 (3).jpg",
-          "comp_2019 (4).jpg",
-          "comp_2020.jpg",
-          "comp_2020.png"
-        ],
-        "videos": [],
-        "pdfs": [],
-        "embeds": [],
-        "children": []
-      }
-    ]
-  },
-  {
-    "name": "06_Drawing",
-    "path": "06_Drawing",
-    "type": "folder",
-    "images": [],
-    "videos": [],
-    "pdfs": [],
-    "embeds": [],
-    "children": [
-      {
         "name": "collage004_projectivearchives_dada",
-        "path": "06_Drawing/collage004_projectivearchives_dada",
+        "path": "05_Earlier/collage004_projectivearchives_dada",
         "type": "folder",
         "images": [
           "drw_designwitharchive (1).gif",
@@ -727,7 +814,7 @@
       },
       {
         "name": "collage006_thegardenofearthlydelights",
-        "path": "06_Drawing/collage006_thegardenofearthlydelights",
+        "path": "05_Earlier/collage006_thegardenofearthlydelights",
         "type": "folder",
         "images": [
           "bosch_collageengine (1).jpg",
@@ -741,7 +828,7 @@
       },
       {
         "name": "collage007_projectivearchives",
-        "path": "06_Drawing/collage007_projectivearchives",
+        "path": "05_Earlier/collage007_projectivearchives",
         "type": "folder",
         "images": [
           "DIA_kitbash.jpg"
@@ -753,7 +840,7 @@
       },
       {
         "name": "collage008",
-        "path": "06_Drawing/collage008",
+        "path": "05_Earlier/collage008",
         "type": "folder",
         "images": [
           "collage_ghent (1).jpg",
@@ -764,97 +851,18 @@
         "pdfs": [],
         "embeds": [],
         "children": []
-      }
-    ]
-  },
-  {
-    "name": "07_Climate",
-    "path": "07_Climate",
-    "type": "folder",
-    "images": [
-      "DIA_Facade.jpg",
-      "DIA_ghent.jpg",
-      "DenderRiver_Arche.jpg",
-      "DenderRiver_Floods_BE (2).jpg",
-      "DenderRiver_Floods_BE.jpg",
-      "Dender_imagine.png",
-      "climatic_ghent.jpg",
-      "comp_waterLand.jpg",
-      "comp_waterTreatmentLND.jpg",
-      "detail_waterTreatmentFacade.jpg",
-      "experiment_shaurya_india.jpg"
-    ],
-    "videos": [
-      "realtimedata_ghent.mp4"
-    ],
-    "pdfs": [],
-    "embeds": [],
-    "children": []
-  },
-  {
-    "name": "08_Earlier",
-    "path": "08_Earlier",
-    "type": "folder",
-    "images": [],
-    "videos": [],
-    "pdfs": [],
-    "embeds": [],
-    "children": [
-      {
-        "name": "Int",
-        "path": "08_Earlier/Int",
-        "type": "folder",
-        "images": [
-          "moodboard (1).jpg",
-          "moodboard (10).jpg",
-          "moodboard (11).jpg",
-          "moodboard (12).jpg",
-          "moodboard (2).jpg",
-          "moodboard (3).jpg",
-          "moodboard (4).jpg",
-          "moodboard (5).jpg",
-          "moodboard (6).jpg",
-          "moodboard (7).jpg",
-          "moodboard (8).jpg",
-          "moodboard (9).jpg"
-        ],
-        "videos": [],
-        "pdfs": [],
-        "embeds": [],
-        "children": [
-          {
-            "name": "G-house_interior_freelance",
-            "path": "08_Earlier/Int/G-house_interior_freelance",
-            "type": "folder",
-            "images": [
-              "ghouse (1).gif",
-              "ghouse (1).jpg",
-              "ghouse (2).gif",
-              "ghouse (3).gif"
-            ],
-            "videos": [],
-            "pdfs": [],
-            "embeds": [],
-            "children": []
-          }
-        ]
       },
       {
-        "name": "StudentPortfolio",
-        "path": "08_Earlier/StudentPortfolio",
+        "name": "other",
+        "path": "05_Earlier/other",
         "type": "folder",
         "images": [
-          "UrbanGame_Halic_BAThesis.jpg",
-          "architectSinan_comp (2).jpg",
-          "architectSinan_comp.jpg",
-          "center_senegal.jpg",
-          "climatic_Ghent_overpoort.jpg",
-          "dender_burcht_floodablepark.jpg",
-          "desert_Konya.jpg",
-          "urbanGame_IST.jpg",
-          "urbanGame_TR.jpg",
-          "urbangame1.gif",
-          "watertreatment_ghent.jpg"
+          "comp_2019 (1).jpg",
+          "comp_2019 (2).jpg",
+          "comp_2019 (3).jpg",
+          "comp_2019 (4).jpg",
+          "comp_2020.jpg",
+          "comp_2020.png"
         ],
         "videos": [],
         "pdfs": [],
