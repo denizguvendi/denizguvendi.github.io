@@ -669,10 +669,9 @@ Turkish [native], English [fluent]
       }
     }
 
-    // Handle like button click
+  // Handle like button click
     async function handleLike() {
-      likes[currentImagePath] = (likes[currentImagePath] || 0) + 1;
-      await saveLikes();
+      await saveLike(currentImagePath);  // <-- CORRECT
       updateLikeButton();
       
       // Re-render if sorted by likes
