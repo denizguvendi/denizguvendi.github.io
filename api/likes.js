@@ -1,30 +1,41 @@
 const https = require('https');
 
-async function githubRequest(method, path, data) {
-  const token = process.env.GITHUB_TOKEN;
-  const repo = process.env.GITHUB_REPO;
+// Get from Environment Variables in Vercel:
+// JSONBIN_BIN_ID - your bin ID from jsonbin.io
+// JSONBIN_API_KEY - your API key from jsonbin.io
+
+function jsonbinRequest(method, data) {
+  const binId = process.env.JSONBIN_BIN_ID;
+  const apiKey = process.env.JSONBIN_API_KEY;
   
   return new Promise((resolve, reject) => {
     const options = {
-      hostname: 'api.github.com',
-      path: `/repos/${repo}/contents/${path}`,
+      hostname: 'api.jsonbin.io',
+      path: `/v3/b/${binId}`,
       method: method,
       headers: {
-        'Authorization': `token ${token}`,
-        'User-Agent': 'Vercel-Serverless',
-        'Accept': 'application/vnd.github.v3+json',
+        'X-Master-Key': apiKey,
         'Content-Type': 'application/json'
       }
     };
+
+    if (method === 'PUT') {
+      options.headers['X-Bin-Versioning'] = 'false';
+    }
 
     const req = https.request(options, (res) => {
       let body = '';
       res.on('data', chunk => body += chunk);
       res.on('end', () => {
-        if (res.statusCode >= 200 && res.statusCode < 300) {
-          resolve(JSON.parse(body));
-        } else {
-          reject(new Error(`GitHub API error: ${res.statusCode} - ${body}`));
+        try {
+          const parsed = JSON.parse(body);
+          if (res.statusCode >= 200 && res.statusCode < 300) {
+            resolve(parsed);
+          } else {
+            reject(new Error(`JSONBin error: ${res.statusCode} - ${body}`));
+          }
+        } catch (e) {
+          reject(new Error(`Parse error: ${body}`));
         }
       });
     });
@@ -37,40 +48,22 @@ async function githubRequest(method, path, data) {
 
 async function readLikes() {
   try {
-    const result = await githubRequest('GET', 'likes.json');
-    const content = Buffer.from(result.content, 'base64').toString('utf8');
-    return { likes: JSON.parse(content), sha: result.sha };
+    const result = await jsonbinRequest('GET');
+    return result.record || {};
   } catch (e) {
-    return { likes: {}, sha: null };
+    console.error('Read error:', e);
+    return {};
   }
 }
 
-async function writeLikes(likes, sha, retries = 3) {
-  const content = Buffer.from(JSON.stringify(likes, null, 2)).toString('base64');
-  const branch = process.env.GITHUB_BRANCH || 'main';
-  
-  for (let i = 0; i < retries; i++) {
-    try {
-      // Re-fetch latest SHA before writing
-      const { sha: latestSha } = await readLikes();
-      
-      const data = {
-        message: 'Update likes',
-        content: content,
-        branch: branch
-      };
-      
-      if (latestSha) data.sha = latestSha;
-      
-      await githubRequest('PUT', 'likes.json', data);
-      return true;
-    } catch (e) {
-      if (i === retries - 1) throw e;
-      // Wait before retry
-      await new Promise(resolve => setTimeout(resolve, 500 * (i + 1)));
-    }
+async function writeLikes(likes) {
+  try {
+    await jsonbinRequest('PUT', likes);
+    return true;
+  } catch (e) {
+    console.error('Write error:', e);
+    return false;
   }
-  return false;
 }
 
 module.exports = async (req, res) => {
@@ -84,7 +77,7 @@ module.exports = async (req, res) => {
 
   if (req.method === 'GET') {
     try {
-      const { likes } = await readLikes();
+      const likes = await readLikes();
       return res.status(200).json(likes);
     } catch (e) {
       console.error('GET error:', e);
@@ -100,15 +93,19 @@ module.exports = async (req, res) => {
         return res.status(400).json({ error: 'Image path required' });
       }
 
-      const { likes } = await readLikes();
+      const likes = await readLikes();
       likes[image] = (likes[image] || 0) + 1;
       
-      await writeLikes(likes);
+      const success = await writeLikes(likes);
       
-      return res.status(200).json({ 
-        success: true, 
-        likes: likes[image] 
-      });
+      if (success) {
+        return res.status(200).json({ 
+          success: true, 
+          likes: likes[image] 
+        });
+      } else {
+        return res.status(500).json({ error: 'Failed to save' });
+      }
     } catch (e) {
       console.error('POST error:', e);
       return res.status(500).json({ error: e.message });
