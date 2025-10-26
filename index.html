@@ -102,16 +102,16 @@
 
     @media (max-width: 768px) {
       .gallery {
-        gap: 0.5rem;
+        gap: 0.3rem;
       }
       .gallery-main {
-        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
       }
       .gallery-sub-1 {
-        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
       }
       .gallery-sub-2 {
-        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
       }
     }
 
@@ -146,6 +146,12 @@
       width: 100%;
       position: absolute;
       bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .project-card h3 {
+        font-size: 0.6rem;
+      }
     }
 
     .like-badge {
@@ -213,7 +219,7 @@
       padding:0.5rem 1rem;
       background:none;
       border:2px solid #fff;
-      color:#000000;
+      color:#fff;
       font-family:'Roboto Mono',monospace;
       font-weight:bold;
       font-size:1rem;
@@ -222,8 +228,8 @@
     }
 
     #likeBtn:hover {
-      background:#57575780;
-      color:#000;
+      background:#ffffff20;
+      color:#fff;
     }
 
     #about {
@@ -259,7 +265,6 @@
       <option value="size">Size</option>
     </select>
   </div>
-
 
   <main>
     <section id="projects">
@@ -342,32 +347,37 @@ Turkish [native], English [fluent]
       );
     }
 
-     // Load likes from server
+    // Load likes from server
     async function loadLikes() {
       try {
         const response = await fetch('/api/likes');
         const data = await response.json();
         likes = data;
+        console.log('Likes loaded:', likes);
       } catch (e) {
-        console.log('Failed to load likes', e);
+        console.error('Failed to load likes:', e);
       }
     }
 
     // Save like to server
     async function saveLike(imagePath) {
       try {
+        console.log('Saving like for:', imagePath);
         const response = await fetch('/api/likes', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ image: imagePath })
         });
         const data = await response.json();
+        console.log('Like response:', data);
         if (data.success) {
           likes[imagePath] = data.likes;
+          return true;
         }
       } catch (e) {
-        console.error('Failed to save like', e);
+        console.error('Failed to save like:', e);
       }
+      return false;
     }
 
     // Calculate image luminance
@@ -669,18 +679,21 @@ Turkish [native], English [fluent]
       }
     }
 
-  // Handle like button click
+    // Handle like button click
     async function handleLike() {
-      await saveLike(currentImagePath);  // <-- CORRECT
-      updateLikeButton();
-      
-      // Re-render if sorted by likes
-      if (currentSort === 'likes') {
-        if (currentStack.length === 0) {
-          renderMainPage();
-        } else {
-          const currentFolder = currentStack[currentStack.length - 1];
-          renderGallery(currentFolder.children || [], currentStack);
+      console.log('Like button clicked for:', currentImagePath);
+      const success = await saveLike(currentImagePath);
+      if (success) {
+        updateLikeButton();
+        
+        // Re-render if sorted by likes
+        if (currentSort === 'likes') {
+          if (currentStack.length === 0) {
+            renderMainPage();
+          } else {
+            const currentFolder = currentStack[currentStack.length - 1];
+            renderGallery(currentFolder.children || [], currentStack);
+          }
         }
       }
     }
@@ -689,7 +702,8 @@ Turkish [native], English [fluent]
     document.getElementById("aboutBtn").onclick = function() {
       document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
     };
-//sort buttons
+
+    // Sort buttons
     document.getElementById('sortSelect').addEventListener('change', function() {
       currentSort = this.value;
 
@@ -754,16 +768,16 @@ Turkish [native], English [fluent]
 
     // Load data and initialize
     initObserver();
-    loadLikes();
-    fetch("files.json")
-      .then(res => res.json())
-      .then(data => {
-        fullTree = data;
-        collectAllProjects(data);
-        renderMainPage();
-      })
-      .catch(err => console.error("Failed to load files.json", err));
-  
+    loadLikes().then(() => {
+      fetch("files.json")
+        .then(res => res.json())
+        .then(data => {
+          fullTree = data;
+          collectAllProjects(data);
+          renderMainPage();
+        })
+        .catch(err => console.error("Failed to load files.json", err));
+    });
   </script>
 </body>
 </html>
