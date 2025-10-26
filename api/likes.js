@@ -1,10 +1,5 @@
 const https = require('https');
 
-// Set these as Environment Variables in Vercel:
-// GITHUB_TOKEN - Personal access token with repo scope
-// GITHUB_REPO - your-username/your-repo-name
-// GITHUB_BRANCH - main (or master)
-
 async function githubRequest(method, path, data) {
   const token = process.env.GITHUB_TOKEN;
   const repo = process.env.GITHUB_REPO;
@@ -29,7 +24,7 @@ async function githubRequest(method, path, data) {
         if (res.statusCode >= 200 && res.statusCode < 300) {
           resolve(JSON.parse(body));
         } else {
-          reject(new Error(`GitHub API error: ${res.statusCode}`));
+          reject(new Error(`GitHub API error: ${res.statusCode} - ${body}`));
         }
       });
     });
@@ -50,19 +45,32 @@ async function readLikes() {
   }
 }
 
-async function writeLikes(likes, sha) {
+async function writeLikes(likes, sha, retries = 3) {
   const content = Buffer.from(JSON.stringify(likes, null, 2)).toString('base64');
   const branch = process.env.GITHUB_BRANCH || 'main';
   
-  const data = {
-    message: 'Update likes',
-    content: content,
-    branch: branch
-  };
-  
-  if (sha) data.sha = sha;
-  
-  await githubRequest('PUT', 'likes.json', data);
+  for (let i = 0; i < retries; i++) {
+    try {
+      // Re-fetch latest SHA before writing
+      const { sha: latestSha } = await readLikes();
+      
+      const data = {
+        message: 'Update likes',
+        content: content,
+        branch: branch
+      };
+      
+      if (latestSha) data.sha = latestSha;
+      
+      await githubRequest('PUT', 'likes.json', data);
+      return true;
+    } catch (e) {
+      if (i === retries - 1) throw e;
+      // Wait before retry
+      await new Promise(resolve => setTimeout(resolve, 500 * (i + 1)));
+    }
+  }
+  return false;
 }
 
 module.exports = async (req, res) => {
@@ -75,26 +83,36 @@ module.exports = async (req, res) => {
   }
 
   if (req.method === 'GET') {
-    const { likes } = await readLikes();
-    return res.status(200).json(likes);
+    try {
+      const { likes } = await readLikes();
+      return res.status(200).json(likes);
+    } catch (e) {
+      console.error('GET error:', e);
+      return res.status(500).json({ error: e.message });
+    }
   }
 
   if (req.method === 'POST') {
-    const { image } = req.body;
-    
-    if (!image) {
-      return res.status(400).json({ error: 'Image path required' });
-    }
+    try {
+      const { image } = req.body;
+      
+      if (!image) {
+        return res.status(400).json({ error: 'Image path required' });
+      }
 
-    const { likes, sha } = await readLikes();
-    likes[image] = (likes[image] || 0) + 1;
-    
-    await writeLikes(likes, sha);
-    
-    return res.status(200).json({ 
-      success: true, 
-      likes: likes[image] 
-    });
+      const { likes } = await readLikes();
+      likes[image] = (likes[image] || 0) + 1;
+      
+      await writeLikes(likes);
+      
+      return res.status(200).json({ 
+        success: true, 
+        likes: likes[image] 
+      });
+    } catch (e) {
+      console.error('POST error:', e);
+      return res.status(500).json({ error: e.message });
+    }
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
