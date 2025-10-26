@@ -343,11 +343,11 @@ Turkish [native], English [fluent]
     }
 
     // Load likes from storage
-    async function loadLikes() {
+    function loadLikes() {
       try {
-        const result = await window.storage.get('portfolio-likes');
-        if (result && result.value) {
-          likes = JSON.parse(result.value);
+        const stored = localStorage.getItem('portfolio-likes');
+        if (stored) {
+          likes = JSON.parse(stored);
         }
       } catch (e) {
         console.log('No existing likes');
@@ -355,9 +355,9 @@ Turkish [native], English [fluent]
     }
 
     // Save likes to storage
-    async function saveLikes() {
+    function saveLikes() {
       try {
-        await window.storage.set('portfolio-likes', JSON.stringify(likes));
+        localStorage.setItem('portfolio-likes', JSON.stringify(likes));
       } catch (e) {
         console.error('Failed to save likes', e);
       }
@@ -748,16 +748,16 @@ Turkish [native], English [fluent]
 
     // Load data and initialize
     initObserver();
-    loadLikes().then(() => {
-      fetch("files.json")
-        .then(res => res.json())
-        .then(data => {
-          fullTree = data;
-          collectAllProjects(data);
-          renderMainPage();
-        })
-        .catch(err => console.error("Failed to load files.json", err));
-    });
+    loadLikes();
+    fetch("files.json")
+      .then(res => res.json())
+      .then(data => {
+        fullTree = data;
+        collectAllProjects(data);
+        renderMainPage();
+      })
+      .catch(err => console.error("Failed to load files.json", err));
+  
   </script>
 </body>
 </html>
