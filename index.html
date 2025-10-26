@@ -342,24 +342,31 @@ Turkish [native], English [fluent]
       );
     }
 
-    // Load likes from storage
-    function loadLikes() {
+     // Load likes from server
+    async function loadLikes() {
       try {
-        const stored = localStorage.getItem('portfolio-likes');
-        if (stored) {
-          likes = JSON.parse(stored);
-        }
+        const response = await fetch('/api/likes');
+        const data = await response.json();
+        likes = data;
       } catch (e) {
-        console.log('No existing likes');
+        console.log('Failed to load likes', e);
       }
     }
 
-    // Save likes to storage
-    function saveLikes() {
+    // Save like to server
+    async function saveLike(imagePath) {
       try {
-        localStorage.setItem('portfolio-likes', JSON.stringify(likes));
+        const response = await fetch('/api/likes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ image: imagePath })
+        });
+        const data = await response.json();
+        if (data.success) {
+          likes[imagePath] = data.likes;
+        }
       } catch (e) {
-        console.error('Failed to save likes', e);
+        console.error('Failed to save like', e);
       }
     }
 
