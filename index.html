@@ -347,10 +347,11 @@ Turkish [native], English [fluent]
       );
     }
 
-    // Load likes from server
+    const API_BASE = 'https://denizguvendi-github-io.vercel.app/api/likes';
+
     async function loadLikes() {
       try {
-        const response = await fetch('/api/likes');
+        const response = await fetch(API_BASE);
         const data = await response.json();
         likes = data;
         console.log('Likes loaded:', likes);
@@ -359,11 +360,10 @@ Turkish [native], English [fluent]
       }
     }
 
-    // Save like to server
     async function saveLike(imagePath) {
       try {
         console.log('Saving like for:', imagePath);
-        const response = await fetch('/api/likes', {
+        const response = await fetch(API_BASE, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ image: imagePath })
