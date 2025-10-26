@@ -764,18 +764,6 @@
         "pdfs": [],
         "embeds": [],
         "children": []
-      },
-      {
-        "name": "navigation",
-        "path": "06_Drawing/navigation",
-        "type": "folder",
-        "images": [
-          "navigate.gif"
-        ],
-        "videos": [],
-        "pdfs": [],
-        "embeds": [],
-        "children": []
       }
     ]
   },
