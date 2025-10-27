@@ -677,49 +677,32 @@
         "path": "05_Earlier/Interior",
         "type": "folder",
         "images": [
-          "moodboard (1).jpg",
-          "moodboard (10).jpg",
-          "moodboard (11).jpg",
-          "moodboard (12).jpg",
-          "moodboard (2).jpg",
-          "moodboard (3).jpg",
-          "moodboard (4).jpg",
-          "moodboard (5).jpg",
-          "moodboard (6).jpg",
-          "moodboard (7).jpg",
-          "moodboard (8).jpg",
-          "moodboard (9).jpg"
+          "interior (1).gif",
+          "interior (1).jpg",
+          "interior (2).gif",
+          "interior (3).gif"
         ],
         "videos": [],
         "pdfs": [],
         "embeds": [],
-        "children": [
-          {
-            "name": "G-house_interior_freelance",
-            "path": "05_Earlier/Interior/G-house_interior_freelance",
-            "type": "folder",
-            "images": [
-              "ghouse (1).gif",
-              "ghouse (1).jpg",
-              "ghouse (2).gif",
-              "ghouse (3).gif"
-            ],
-            "videos": [],
-            "pdfs": [],
-            "embeds": [],
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "name": "MAA",
         "path": "05_Earlier/MAA",
         "type": "folder",
         "images": [
-          "DIA.png",
-          "DIA_Salacak.png",
           "Faculty.png",
-          "PrimarySchool.png"
+          "PrimarySchool.png",
+          "istanbul-salacak.png",
+          "salacak_istanbul (1).jpg",
+          "salacak_istanbul (1).png",
+          "salacak_istanbul (2).jpg",
+          "salacak_istanbul (2).png",
+          "salacak_istanbul (3).jpg",
+          "salacak_istanbul (3).png",
+          "salacak_istanbul (4).png",
+          "salacak_istanbul (5).png"
         ],
         "videos": [],
         "pdfs": [],
@@ -793,10 +776,17 @@
         "children": []
       },
       {
-        "name": "collage004_projectivearchives_dada",
-        "path": "05_Earlier/collage004_projectivearchives_dada",
+        "name": "collage008",
+        "path": "05_Earlier/collage008",
         "type": "folder",
         "images": [
+          "DIA_kitbash.jpg",
+          "bosch_collageengine (1).jpg",
+          "bosch_collageengine (2).jpg",
+          "bosch_collageengine (3).jpg",
+          "collage_ghent (1).jpg",
+          "collage_ghent (2).jpg",
+          "collage_ghent (3).jpg",
           "drw_designwitharchive (1).gif",
           "drw_designwitharchive (1).jpg",
           "drw_designwitharchive (2).jpg",
@@ -806,46 +796,6 @@
           "drw_designwitharchive (6).jpg",
           "drw_designwitharchive (7).jpg",
           "drw_designwitharchive (8).jpg"
-        ],
-        "videos": [],
-        "pdfs": [],
-        "embeds": [],
-        "children": []
-      },
-      {
-        "name": "collage006_thegardenofearthlydelights",
-        "path": "05_Earlier/collage006_thegardenofearthlydelights",
-        "type": "folder",
-        "images": [
-          "bosch_collageengine (1).jpg",
-          "bosch_collageengine (2).jpg",
-          "bosch_collageengine (3).jpg"
-        ],
-        "videos": [],
-        "pdfs": [],
-        "embeds": [],
-        "children": []
-      },
-      {
-        "name": "collage007_projectivearchives",
-        "path": "05_Earlier/collage007_projectivearchives",
-        "type": "folder",
-        "images": [
-          "DIA_kitbash.jpg"
-        ],
-        "videos": [],
-        "pdfs": [],
-        "embeds": [],
-        "children": []
-      },
-      {
-        "name": "collage008",
-        "path": "05_Earlier/collage008",
-        "type": "folder",
-        "images": [
-          "collage_ghent (1).jpg",
-          "collage_ghent (2).jpg",
-          "collage_ghent (3).jpg"
         ],
         "videos": [],
         "pdfs": [],
