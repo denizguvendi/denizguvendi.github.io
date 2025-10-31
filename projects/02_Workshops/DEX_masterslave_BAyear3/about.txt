@@ -1,0 +1,58 @@
+Brief
+1 Workshop Overview
+1.1 Course Agenda
+Keywords— #hacking #tracking #tracing #scraping #sensing #AI #synthetic #Iot #architecture #augmentation
+#compression #surveillance #scripting #algorithms
+In technology, architecture, or electronics, the ”master/slave” protocol is used to describe an asymmetric
+relationship between primary and secondary devices or components of a system. This relationship is most
+often, dependent on the amount of control or computation embedded in a system. In a linked configuration,
+whenever a device has significantly more compute or control than its counterparts, it is considered to be the
+’Master’, and if the roles are reversed, we call it a ’Slave’. A clear reference to this relationship used to be
+prominent within the AI-human discourse, but in recent years, this border has become more vague, cryptic,
+and obscure. We are learning that machines can work better and faster, not when we subject them to our
+modus operandi, but when we let them follow a different, nonhuman, black box protocol. We increasingly find
+it easier to let computers solve problems in their own way - even when we do not understand what they do or
+how they do it.
+This workshop explores the intricacies of the physical manifestation of this protocol, exploring the changing
+dynamics of control within architecture and technology. Let’s switch roles, let go of control, embrace the
+unknown, and speculate the simulacrum!
+1.2 Objectives
+• Fostering a deeper understanding of nonhuman protocols to solve very human problems.
+• Critical data filtering, visualization, and communication.
+• Mapping and visualizing the hidden layers of the site, and producing a critical response.
+1.3 Methodology / Research Direction
+Students will exercise this exploration in the built environment in and around the university, taking sites from
+different scales and using them as subjects for our projects.
+The project will unfold in 2 phases.
+• phase 1 (slave): Collecting-Sorting-Generating
+Collecting, scraping, capturing, and generating (synthetic) data from the site. This is primarily accomplished
+through sensor data from encased microcontrollers. The result visualizes hidden layers of information,
+such as temperature, humidity, gasses, sound, WiFi, Bluetooth, population, and trajectories,
+all as volumetric 3D heat maps. Additionally, scraping tools, photogrammetry techniques, 360 videos,
+drone footage, metadata-mapped images, and synthetic data can also be deployed. .
+• phase 2 (master): Speculating-Augmenting-Making
+The ’homegrown’ synthetic dataset will be used in a multi-dimensional machine learning model, speculating
+and hallucinating architectural elements that critically act in response to corresponding inputs.
+The model is embedded with sensorial information and can now begin generating ’conditioned’ models
+for different situations, analyzing and mapping the 3D model, and exploiting its thresholds and boundaries.
+The ’conditioned’ model can be augmented back on the physical site, seeing the relationship and
+unlocking the potential spatial opportunities. Various fabrication techniques can be used to build said
+physical models.
+Students are expected to upload a progress model/image/screenshot/text every day to our visual archive as
+a means of capturing the amount of work that has been done.
+3
+(a) archive detail 1 (b) archive detail 2 (c) archive detail 3
+Figure 1: realtime online research archive, Deniz Güvendi and Joris Putteneers | 2023
+1.4 Software / Skills
+A combination of:
+• Various programming languages for programming a microcontroller (ESP32), a database, a backend
+framework, and our machine learning model trained on our in-house dataset.
+• SideFX Houdini for visualizing the generated data, generating synthetic data and training of our machine
+learning model.
+• Git & GitHub for version control.
+• Adobe Photoshop & Illustrator
+• Blender & Rhinoceros for modelling.
+• Gaussian Splatting.
+• Various tools of fabrication. (This will vary on the proposal)
+All techniques will have detailed documentation, students are not required to have prior knowledge
+of the above-mentioned tools.
