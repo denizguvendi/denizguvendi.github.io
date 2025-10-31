@@ -6,7 +6,9 @@
     "images": [
       "archigrad.io.gif"
     ],
-    "videos": [],
+    "videos": [
+      "archigrad.io.tmp.mp4"
+    ],
     "pdfs": [],
     "embeds": [
       "about.txt"
@@ -22,7 +24,10 @@
           "realtimedata.gif",
           "stack.gif"
         ],
-        "videos": [],
+        "videos": [
+          "realtimedata.tmp.mp4",
+          "stack.tmp.mp4"
+        ],
         "pdfs": [],
         "embeds": [],
         "children": []
@@ -118,7 +123,6 @@
         "path": "02_Workshops/DEX_masterslave_BAyear3",
         "type": "folder",
         "images": [
-          "AIA!_studentwork.gif",
           "Chat_Peachy_mapping.jpg",
           "archive-archigrad.jpg",
           "bangkok_bts_data_pollution_sound (1).png",
@@ -130,7 +134,9 @@
           "bangkok_bts_data_pollution_sound (7).png",
           "bangkok_bts_data_pollution_sound (8).png"
         ],
-        "videos": [],
+        "videos": [
+          "AIA!_studentwork.mp4"
+        ],
         "pdfs": [],
         "embeds": [
           "about.txt"
@@ -219,13 +225,13 @@
             "path": "02_Workshops/designtools&skills_BAyear1/procedural_introY1",
             "type": "folder",
             "images": [
-              "intro_procedural_year1 (1).gif",
               "intro_procedural_year1 (1).jpg"
             ],
             "videos": [
               "intro_procedural_year1 (1).mp4",
               "intro_procedural_year1 (2).mp4",
               "intro_procedural_year1 (3).mp4",
+              "intro_procedural_year1 (3).mp4.tmp.mp4",
               "intro_procedural_year1 (4).mp4"
             ],
             "pdfs": [],
@@ -241,11 +247,12 @@
         "path": "02_Workshops/ws_kitbash",
         "type": "folder",
         "images": [
-          "barcelonachair.png",
-          "kitbashing (2).gif",
-          "wearable.gif"
+          "barcelonachair.png"
         ],
-        "videos": [],
+        "videos": [
+          "kitbashing (2).mp4",
+          "wearable.mp4"
+        ],
         "pdfs": [],
         "embeds": [],
         "children": []
@@ -266,10 +273,11 @@
         "path": "03_Curation/INDA-PARADE",
         "type": "folder",
         "images": [
-          "initialidea.png",
-          "promotion.gif"
+          "initialidea.png"
         ],
-        "videos": [],
+        "videos": [
+          "promotion.mp4"
+        ],
         "pdfs": [],
         "embeds": [],
         "children": [
@@ -283,14 +291,15 @@
               "houdini_details_deniz (2).png",
               "houdini_details_deniz (3).png",
               "houdini_details_deniz (4).png",
-              "instagram1.gif",
-              "instagramnoiz.gif",
-              "instanoiz2.gif",
               "processing_deniz (1).png",
               "processing_deniz (2).png",
               "processing_deniz (3).png"
             ],
-            "videos": [],
+            "videos": [
+              "instagram1.mp4",
+              "instagramnoiz.mp4",
+              "instanoiz2.mp4"
+            ],
             "pdfs": [],
             "embeds": [],
             "children": []
@@ -578,11 +587,14 @@
       "commonresidentialblock.gif",
       "mappingGenk.jpg",
       "mosque_sledderlo.gif",
-      "objects_kitbash.gif",
       "shopping2_genk.gif"
     ],
     "videos": [
-      "projecting-dataset.mp4"
+      "commonresidentialblock.tmp.mp4",
+      "mosque_sledderlo.tmp.mp4",
+      "objects_kitbash.mp4",
+      "projecting-dataset.mp4",
+      "shopping2_genk.tmp.mp4"
     ],
     "pdfs": [],
     "embeds": [],
@@ -679,10 +691,13 @@
         "images": [
           "interior (1).gif",
           "interior (1).jpg",
-          "interior (2).gif",
           "interior (3).gif"
         ],
-        "videos": [],
+        "videos": [
+          "interior (1).tmp.mp4",
+          "interior (2).mp4",
+          "interior (3).tmp.mp4"
+        ],
         "pdfs": [],
         "embeds": [],
         "children": []
@@ -748,10 +763,11 @@
           "desert_Konya.jpg",
           "urbanGame_IST.jpg",
           "urbanGame_TR.jpg",
-          "urbangame1.gif",
           "watertreatment_ghent.jpg"
         ],
-        "videos": [],
+        "videos": [
+          "urbangame1.mp4"
+        ],
         "pdfs": [],
         "embeds": [],
         "children": []
@@ -849,7 +865,9 @@
           "drw_designwitharchive (7).jpg",
           "drw_designwitharchive (8).jpg"
         ],
-        "videos": [],
+        "videos": [
+          "drw_designwitharchive (1).tmp.mp4"
+        ],
         "pdfs": [],
         "embeds": [],
         "children": []
