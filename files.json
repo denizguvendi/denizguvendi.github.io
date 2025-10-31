@@ -5,8 +5,7 @@
     "type": "folder",
     "images": [],
     "videos": [
-      "archigrad.io.mp4",
-      "archigrad.io.tmp.mp4"
+      "archigrad.io.mp4"
     ],
     "pdfs": [],
     "embeds": [
@@ -20,11 +19,7 @@
         "images": [],
         "videos": [
           "realtimedata.mp4",
-          "realtimedata.mp4.tmp.mp4",
-          "realtimedata.tmp.mp4",
-          "stack.mp4",
-          "stack.mp4.tmp.mp4",
-          "stack.tmp.mp4"
+          "stack.mp4"
         ],
         "pdfs": [],
         "embeds": [],
@@ -103,13 +98,9 @@
         "images": [],
         "videos": [
           "khaoyai_wayfinding1.mp4",
-          "khaoyai_wayfinding1.mp4.tmp.mp4",
           "khaoyai_wayfinding2.mp4",
-          "khaoyai_wayfinding2.mp4.tmp.mp4",
           "khaoyai_wayfinding3.mp4",
-          "khaoyai_wayfinding3.mp4.tmp.mp4",
-          "khaoyai_wayfinding4.mp4",
-          "khaoyai_wayfinding4.mp4.tmp.mp4"
+          "khaoyai_wayfinding4.mp4"
         ],
         "pdfs": [],
         "embeds": [],
@@ -174,8 +165,7 @@
         "images": [],
         "videos": [
           "kitbashing (2).mp4",
-          "wearable.mp4",
-          "wearable.mp4.tmp.mp4"
+          "wearable.mp4"
         ],
         "pdfs": [],
         "embeds": [],
@@ -280,15 +270,10 @@
     ],
     "videos": [
       "commonresidentialblock.mp4",
-      "commonresidentialblock.tmp.mp4",
       "mosque_sledderlo.mp4",
-      "mosque_sledderlo.tmp.mp4",
       "objects_kitbash.mp4",
-      "objects_kitbash.mp4.tmp.mp4",
       "projecting-dataset.mp4",
-      "projecting-dataset.mp4.tmp.mp4",
-      "shopping2_genk.mp4",
-      "shopping2_genk.tmp.mp4"
+      "shopping2_genk.mp4"
     ],
     "pdfs": [],
     "embeds": [],
@@ -320,8 +305,7 @@
         "type": "folder",
         "images": [],
         "videos": [
-          "realtimedata_ghent.mp4",
-          "realtimedata_ghent.mp4.tmp.mp4"
+          "realtimedata_ghent.mp4"
         ],
         "pdfs": [],
         "embeds": [],
@@ -337,10 +321,8 @@
         ],
         "videos": [
           "interior (1).mp4",
-          "interior (1).tmp.mp4",
           "interior (2).mp4",
-          "interior (3).mp4",
-          "interior (3).tmp.mp4"
+          "interior (3).mp4"
         ],
         "pdfs": [],
         "embeds": [],
@@ -372,8 +354,7 @@
         "type": "folder",
         "images": [],
         "videos": [
-          "urbangame1.mp4",
-          "urbangame1.mp4.tmp.mp4"
+          "urbangame1.mp4"
         ],
         "pdfs": [],
         "embeds": [],
@@ -405,8 +386,7 @@
         "type": "folder",
         "images": [],
         "videos": [
-          "drw_designwitharchive (1).mp4",
-          "drw_designwitharchive (1).tmp.mp4"
+          "drw_designwitharchive (1).mp4"
         ],
         "pdfs": [],
         "embeds": [],
