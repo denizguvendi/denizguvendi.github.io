@@ -4,7 +4,12 @@
     "path": "01_archigrad.io",
     "type": "folder",
     "images": [
-      "archigrad.io.gif"
+      "archigrad-.png",
+      "archigrad-1.png",
+      "archigrad.io.gif",
+      "casing.jpg",
+      "casing01.png",
+      "hardware.jpg"
     ],
     "videos": [],
     "pdfs": [],
@@ -53,10 +58,32 @@
         "embeds": [],
         "children": [
           {
+            "name": "03",
+            "path": "01_archigrad.io/projects/03",
+            "type": "folder",
+            "images": [
+              "00mili7.jpg",
+              "exhibition_bangkokemotionmap (1).png",
+              "exhibition_bangkokemotionmap (2).png",
+              "exhibition_bangkokemotionmap (3).png",
+              "exhibition_bangkokemotionmap (4).png",
+              "exhibition_bangkokemotionmap (5).jpg",
+              "exhibition_bangkokemotionmap (6).jpg",
+              "iteration.png",
+              "iteration2_3 - Photo.jpg"
+            ],
+            "videos": [],
+            "pdfs": [],
+            "embeds": [],
+            "children": []
+          },
+          {
             "name": "04",
             "path": "01_archigrad.io/projects/04",
             "type": "folder",
             "images": [
+              "iteration-01.png",
+              "iteration-02.png",
               "sculptor (1).jpg",
               "sculptor (1).png",
               "sculptor (10).png",
@@ -74,7 +101,8 @@
               "sculptor (6).png",
               "sculptor (7).png",
               "sculptor (8).png",
-              "sculptor (9).png"
+              "sculptor (9).png",
+              "sculptor.png"
             ],
             "videos": [],
             "pdfs": [],
@@ -143,7 +171,24 @@
         "type": "folder",
         "images": [
           "khaoyai_map.png",
-          "khaoyai_wayfinding.png"
+          "khaoyai_wayfinding.png",
+          "observationtower (1).png",
+          "observationtower (2).png",
+          "observationtower (3).png",
+          "observationtower (5).png",
+          "student (1).png",
+          "student (10).png",
+          "student (11).png",
+          "student (12).png",
+          "student (13).png",
+          "student (2).png",
+          "student (3).png",
+          "student (4).png",
+          "student (5).png",
+          "student (6).png",
+          "student (7).png",
+          "student (8).png",
+          "student (9).png"
         ],
         "videos": [
           "khaoyai_wayfinding1.mp4",
@@ -151,6 +196,47 @@
           "khaoyai_wayfinding3.mp4",
           "khaoyai_wayfinding4.mp4"
         ],
+        "pdfs": [],
+        "embeds": [],
+        "children": []
+      },
+      {
+        "name": "designstudio",
+        "path": "02_Workshops/designstudio",
+        "type": "folder",
+        "images": [
+          "Y2S1_SANTA (10).png",
+          "Y2S1_SANTA (12).png",
+          "Y2S1_SANTA (14).png",
+          "Y2S1_SANTA (15).png",
+          "Y2S1_SANTA (16).png",
+          "Y2S1_SANTA (17).png",
+          "Y2S1_SANTA (18).png",
+          "Y2S1_SANTA (2).png",
+          "Y2S1_SANTA (20).png",
+          "Y2S1_SANTA (3).png",
+          "Y2S1_SANTA (5).png",
+          "Y2S1_SANTA (6).png",
+          "Y2S1_SANTA (7).png",
+          "Y2S1_SOMGENE (10).png",
+          "Y2S1_SOMGENE (2).png",
+          "Y2S1_SOMGENE (3).png",
+          "Y2S1_SOMGENE (4).png",
+          "Y2S1_SOMGENE (5).png",
+          "Y2S1_SOMGENE (6).png",
+          "Y2S1_SOMGENE (7).png",
+          "Y2S1_SOMGENE (8).png",
+          "Y2S1_SOMGENE (9).png",
+          "arna_y2s1 (1).png",
+          "arna_y2s1 (2).png",
+          "somgene_y2s1 (1).png",
+          "somgene_y2s1 (2).png",
+          "somgene_y2s1 (3).png",
+          "tangmo_y2s1 (1).png",
+          "tangmo_y2s1 (2).png",
+          "tangmo_y2s1 (3).png"
+        ],
+        "videos": [],
         "pdfs": [],
         "embeds": [],
         "children": []
@@ -184,7 +270,14 @@
               "blenderintro_year1 (6).png",
               "blenderintro_year1 (7).png",
               "blenderintro_year1 (8).png",
-              "blenderintro_year1 (9).png"
+              "blenderintro_year1 (9).png",
+              "student_outcome (1).png",
+              "student_outcome (2).png",
+              "student_outcome (3).png",
+              "student_outcome (4).png",
+              "student_outcome (5).png",
+              "student_outcome (6).png",
+              "studentoutcome-renderpasses.png"
             ],
             "videos": [],
             "pdfs": [],
@@ -243,6 +336,7 @@
         "images": [
           "barcelonachair.png",
           "kitbashing (2).gif",
+          "wearable-karmarenderer.png",
           "wearable.gif"
         ],
         "videos": [],
@@ -267,7 +361,12 @@
         "type": "folder",
         "images": [
           "initialidea.png",
-          "promotion.gif"
+          "parade (1).png",
+          "parade (2).png",
+          "parade (3).png",
+          "parade-plan.jpg",
+          "promotion.gif",
+          "sorting.png"
         ],
         "videos": [],
         "pdfs": [],
@@ -452,6 +551,30 @@
               "g (7).png",
               "g (8).png",
               "g (9).png"
+            ],
+            "videos": [],
+            "pdfs": [],
+            "embeds": [],
+            "children": []
+          },
+          {
+            "name": "exhibition",
+            "path": "03_Curation/INDA-PARADE/exhibition",
+            "type": "folder",
+            "images": [
+              "exhibition (1).JPG",
+              "exhibition (10).JPG",
+              "exhibition (11).JPG",
+              "exhibition (2).JPG",
+              "exhibition (3).JPG",
+              "exhibition (4).JPG",
+              "exhibition (5).JPG",
+              "exhibition (6).JPG",
+              "exhibition (7).JPG",
+              "exhibition (8).JPG",
+              "exhibition (9).JPG",
+              "exhibition.JPG",
+              "lecture_noiz.JPG"
             ],
             "videos": [],
             "pdfs": [],
