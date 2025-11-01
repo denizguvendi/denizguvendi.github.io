@@ -70,7 +70,6 @@
               "exhibition_bangkokemotionmap (4).png",
               "exhibition_bangkokemotionmap (5).jpg",
               "exhibition_bangkokemotionmap (6).jpg",
-              "iteration.png",
               "iteration2_3 - Photo.jpg"
             ],
             "videos": [],
@@ -117,12 +116,10 @@
             "images": [
               "pot (1).jpeg",
               "pot (2).jpeg",
-              "pot (3).jpeg",
-              "pot (4).jpeg",
-              "pot (5).jpeg",
+              "pot (2).png",
               "pot (6).jpeg",
               "pot (7).jpeg",
-              "pot (8).jpeg"
+              "pot.png"
             ],
             "videos": [],
             "pdfs": [],
@@ -337,6 +334,7 @@
         "images": [
           "barcelonachair.png",
           "kitbashing (2).gif",
+          "wearable-closeup.png",
           "wearable-karmarenderer.png",
           "wearable.gif"
         ],
