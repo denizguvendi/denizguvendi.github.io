@@ -203,26 +203,14 @@
         "path": "02_Workshops/designstudio",
         "type": "folder",
         "images": [
-          "Y2S1_SANTA (12).png",
-          "Y2S1_SANTA (14).png",
-          "Y2S1_SANTA (15).png",
-          "Y2S1_SANTA (16).png",
           "Y2S1_SANTA (17).png",
-          "Y2S1_SANTA (18).png",
-          "Y2S1_SANTA (20).png",
           "Y2S1_SANTA (6).png",
-          "Y2S1_SOMGENE (10).png",
           "Y2S1_SOMGENE (2).png",
           "Y2S1_SOMGENE (4).png",
           "Y2S1_SOMGENE (5).png",
-          "Y2S1_SOMGENE (6).png",
           "Y2S1_SOMGENE (7).png",
           "Y2S1_SOMGENE (8).png",
           "Y2S1_SOMGENE (9).png",
-          "arna_y2s1 (1).png",
-          "somgene_y2s1 (1).png",
-          "somgene_y2s1 (2).png",
-          "somgene_y2s1 (3).png",
           "tangmo_y2s1 (1).png",
           "tangmo_y2s1 (2).png",
           "tangmo_y2s1 (3).png"
@@ -362,7 +350,9 @@
         ],
         "videos": [],
         "pdfs": [],
-        "embeds": [],
+        "embeds": [
+          "PARADE.txt"
+        ],
         "children": [
           {
             "name": "Event_Posters",
