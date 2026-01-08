@@ -18,39 +18,8 @@
     ],
     "children": [
       {
-        "name": "archive",
-        "path": "01_archigrad.io/archive",
-        "type": "folder",
-        "images": [
-          "archive.jpg",
-          "archivestack.jpg",
-          "realtimedata.gif",
-          "stack.gif"
-        ],
-        "videos": [],
-        "pdfs": [],
-        "embeds": [],
-        "children": []
-      },
-      {
-        "name": "imagine",
-        "path": "01_archigrad.io/imagine",
-        "type": "folder",
-        "images": [
-          "ComfyUI_00011_.png",
-          "ComfyUI_00040_.png",
-          "ComfyUI_00046_.png",
-          "comfyui-mahanakon-datacenter.jpg",
-          "comfyui-mahanakon.jpg"
-        ],
-        "videos": [],
-        "pdfs": [],
-        "embeds": [],
-        "children": []
-      },
-      {
-        "name": "projects",
-        "path": "01_archigrad.io/projects",
+        "name": "01_projects",
+        "path": "01_archigrad.io/01_projects",
         "type": "folder",
         "images": [],
         "videos": [],
@@ -59,7 +28,7 @@
         "children": [
           {
             "name": "02",
-            "path": "01_archigrad.io/projects/02",
+            "path": "01_archigrad.io/01_projects/02",
             "type": "folder",
             "images": [
               "ecology_djivopugur.png",
@@ -80,7 +49,7 @@
           },
           {
             "name": "03",
-            "path": "01_archigrad.io/projects/03",
+            "path": "01_archigrad.io/01_projects/03",
             "type": "folder",
             "images": [
               "00mili7.jpg",
@@ -100,7 +69,7 @@
           },
           {
             "name": "04",
-            "path": "01_archigrad.io/projects/04",
+            "path": "01_archigrad.io/01_projects/04",
             "type": "folder",
             "images": [
               "iteration-01.png",
@@ -132,7 +101,7 @@
           },
           {
             "name": "09",
-            "path": "01_archigrad.io/projects/09",
+            "path": "01_archigrad.io/01_projects/09",
             "type": "folder",
             "images": [
               "02 (10).png",
@@ -152,6 +121,37 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "archive",
+        "path": "01_archigrad.io/archive",
+        "type": "folder",
+        "images": [
+          "archive.jpg",
+          "archivestack.jpg",
+          "realtimedata.gif",
+          "stack.gif"
+        ],
+        "videos": [],
+        "pdfs": [],
+        "embeds": [],
+        "children": []
+      },
+      {
+        "name": "imagine",
+        "path": "01_archigrad.io/imagine",
+        "type": "folder",
+        "images": [
+          "ComfyUI_00011_.png",
+          "ComfyUI_00040_.png",
+          "ComfyUI_00046_.png",
+          "comfyui-mahanakon-datacenter.jpg",
+          "comfyui-mahanakon.jpg"
+        ],
+        "videos": [],
+        "pdfs": [],
+        "embeds": [],
+        "children": []
       }
     ]
   },
