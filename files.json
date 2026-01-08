@@ -817,8 +817,8 @@
         "children": []
       },
       {
-        "name": "MAA",
-        "path": "05_Earlier/MAA",
+        "name": "MAA_istanbul",
+        "path": "05_Earlier/MAA_istanbul",
         "type": "folder",
         "images": [
           "Faculty.png",
@@ -886,25 +886,6 @@
         "children": []
       },
       {
-        "name": "UA",
-        "path": "05_Earlier/UA",
-        "type": "folder",
-        "images": [
-          "comp_ArchitectSinan (1).png",
-          "comp_ArchitectSinan (2).png",
-          "comp_TR_Desert (1).png",
-          "comp_TR_Desert (2).png",
-          "comp_TR_Desert (3).png",
-          "comp_TR_Desert (4).png",
-          "comp_TR_Desert (5).png",
-          "comp_TR_Desert (6).png"
-        ],
-        "videos": [],
-        "pdfs": [],
-        "embeds": [],
-        "children": []
-      },
-      {
         "name": "ai",
         "path": "05_Earlier/ai",
         "type": "folder",
@@ -957,8 +938,8 @@
         "children": []
       },
       {
-        "name": "collage008",
-        "path": "05_Earlier/collage008",
+        "name": "collage",
+        "path": "05_Earlier/collage",
         "type": "folder",
         "images": [
           "DIA_kitbash.jpg",
@@ -994,6 +975,25 @@
           "comp_2019 (4).jpg",
           "comp_2020.jpg",
           "comp_2020.png"
+        ],
+        "videos": [],
+        "pdfs": [],
+        "embeds": [],
+        "children": []
+      },
+      {
+        "name": "urbanAtolye_istanbul",
+        "path": "05_Earlier/urbanAtolye_istanbul",
+        "type": "folder",
+        "images": [
+          "comp_ArchitectSinan (1).png",
+          "comp_ArchitectSinan (2).png",
+          "comp_TR_Desert (1).png",
+          "comp_TR_Desert (2).png",
+          "comp_TR_Desert (3).png",
+          "comp_TR_Desert (4).png",
+          "comp_TR_Desert (5).png",
+          "comp_TR_Desert (6).png"
         ],
         "videos": [],
         "pdfs": [],
