@@ -58,6 +58,27 @@
         "embeds": [],
         "children": [
           {
+            "name": "02",
+            "path": "01_archigrad.io/projects/02",
+            "type": "folder",
+            "images": [
+              "ecology_djivopugur.png",
+              "groundhut_2b.png",
+              "mike_3_b.png",
+              "mike_4.png",
+              "randall_1.png",
+              "randall_3_rock.png",
+              "randall_4.png",
+              "sectionplans1.jpg",
+              "sectionplans2.jpg",
+              "sectionplans3.jpg"
+            ],
+            "videos": [],
+            "pdfs": [],
+            "embeds": [],
+            "children": []
+          },
+          {
             "name": "03",
             "path": "01_archigrad.io/projects/03",
             "type": "folder",
@@ -103,23 +124,6 @@
               "sculptor (8).png",
               "sculptor (9).png",
               "sculptor.png"
-            ],
-            "videos": [],
-            "pdfs": [],
-            "embeds": [],
-            "children": []
-          },
-          {
-            "name": "09",
-            "path": "01_archigrad.io/projects/09",
-            "type": "folder",
-            "images": [
-              "pot (1).jpeg",
-              "pot (2).jpeg",
-              "pot (2).png",
-              "pot (6).jpeg",
-              "pot (7).jpeg",
-              "pot.png"
             ],
             "videos": [],
             "pdfs": [],
